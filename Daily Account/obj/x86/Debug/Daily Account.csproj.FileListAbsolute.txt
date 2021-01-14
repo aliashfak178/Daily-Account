@@ -1,0 +1,20 @@
+D:\ASHFAQUE\COMPUTERS\softwere\C#\Daily Account\Daily Account\bin\Debug\Daily Account.exe
+D:\ASHFAQUE\COMPUTERS\softwere\C#\Daily Account\Daily Account\bin\Debug\Daily Account.pdb
+D:\ASHFAQUE\COMPUTERS\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily_Account.Form1.resources
+D:\ASHFAQUE\COMPUTERS\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily_Account.Properties.Resources.resources
+D:\ASHFAQUE\COMPUTERS\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.csproj.GenerateResource.Cache
+D:\ASHFAQUE\COMPUTERS\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.exe
+D:\ASHFAQUE\COMPUTERS\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.pdb
+D:\ASHFAQUE\COMPUTERS\softwere\C#\Daily Account\Daily Account\bin\Debug\Daily Account.exe.config
+D:\ASHFAQUE\COMPUTERS\softwere\C#\Daily Account\Daily Account\bin\Debug\Guna.UI2.dll
+F:\softwere\C#\Daily Account\Daily Account\bin\Debug\Daily Account.exe.config
+F:\softwere\C#\Daily Account\Daily Account\bin\Debug\Daily Account.exe
+F:\softwere\C#\Daily Account\Daily Account\bin\Debug\Daily Account.pdb
+F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.csprojAssemblyReference.cache
+F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily_Account.Form1.resources
+F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily_Account.Properties.Resources.resources
+F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.csproj.GenerateResource.cache
+F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.csproj.CoreCompileInputs.cache
+F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.csproj.CopyComplete
+F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.exe
+F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.pdb
