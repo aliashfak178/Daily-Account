@@ -9,11 +9,18 @@ using System.Windows.Forms;
 
 namespace Daily_Account
 {
-    public partial class Form1 : Form
+    public partial class DashBoard : Form
     {
-        public Form1()
+        String User;
+        public DashBoard(String user)
         {
             InitializeComponent();
+            User = user;
+        }
+
+        private void DashBoard_Load(object sender, EventArgs e)
+        {
+            label1.Text = User;
         }
     }
 }

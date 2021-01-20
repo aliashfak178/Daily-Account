@@ -18,3 +18,15 @@ F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.csproj.Co
 F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.csproj.CopyComplete
 F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.exe
 F:\softwere\C#\Daily Account\Daily Account\obj\x86\Debug\Daily Account.pdb
+E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Daily Account.exe.config
+E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Daily Account.exe
+E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Daily Account.pdb
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.csprojAssemblyReference.cache
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.LoginForm.resources
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Properties.Resources.resources
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.csproj.GenerateResource.cache
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.csproj.CoreCompileInputs.cache
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.csproj.CopyComplete
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.exe
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.pdb
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.DashBoard.resources
