@@ -20,7 +20,13 @@ namespace Daily_Account
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-            label1.Text = User;
+
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

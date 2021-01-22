@@ -30,3 +30,7 @@ E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.cspr
 E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.exe
 E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.pdb
 E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.DashBoard.resources
+E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Utility.dll
+E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Utility.pdb
