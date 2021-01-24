@@ -34,3 +34,4 @@ E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Microsoft.VisualBasic.
 E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Utility.dll
 E:\Upload File test\Daily-Account\Daily Account\bin\Debug\Utility.pdb
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.PurchaseForm.resources

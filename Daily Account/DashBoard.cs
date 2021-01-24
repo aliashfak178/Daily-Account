@@ -27,6 +27,24 @@ namespace Daily_Account
         {
             Application.Exit();
         }
+        private Form ActiveForm = null;
+        private void OpenChildForm(Form ChildForm)
+        {
+            if (ActiveForm != null)
+                ActiveForm.Close();
+            ActiveForm = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            DashBoardPanel.Controls.Add(ChildForm);
+            DashBoardPanel.Tag = ChildForm;
+            ChildForm.BringToFront();
+            ChildForm.Show();
+        }
 
+        private void PurchaseButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PurchaseForm());
+        }
     }
 }
