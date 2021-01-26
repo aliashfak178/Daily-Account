@@ -20,7 +20,13 @@ namespace Daily_Account
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
+            VisiblePanelFalse();
+        }
 
+        private void VisiblePanelFalse()
+        {
+            PurchasePanel.Visible = false;
+            SalesPanel.Visible = false;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -45,6 +51,13 @@ namespace Daily_Account
         private void PurchaseButton_Click(object sender, EventArgs e)
         {
             OpenChildForm(new PurchaseForm());
+            VisiblePanelFalse();
+            PurchasePanel.Visible = true;
+        }
+
+        private void SalesButton_Click(object sender, EventArgs e)
+        {
+             
         }
     }
 }
