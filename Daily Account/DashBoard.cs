@@ -21,6 +21,7 @@ namespace Daily_Account
         private void DashBoard_Load(object sender, EventArgs e)
         {
             VisiblePanelFalse();
+            OpenChildForm(new HomePage());
         }
 
         private void VisiblePanelFalse()
@@ -50,14 +51,84 @@ namespace Daily_Account
 
         private void PurchaseButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new PurchaseForm());
+            //OpenChildForm(new PurchaseForm());
             VisiblePanelFalse();
             PurchasePanel.Visible = true;
         }
 
         private void SalesButton_Click(object sender, EventArgs e)
         {
-             
+            VisiblePanelFalse();
+            SalesPanel.Visible = true;
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new HomePage());
+            VisiblePanelFalse();
+        }
+
+        private void StockButton_Click(object sender, EventArgs e)
+        {
+            VisiblePanelFalse();
+        }
+
+        private void StatisticsButton_Click(object sender, EventArgs e)
+        {
+            VisiblePanelFalse();
+        }
+
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+            VisiblePanelFalse();
+        }
+
+        private void AddPurchaseButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AddPurchase());
+            VisiblePanelFalse();
+        }
+
+        private void DisplayPurchaseButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AllPurchases());
+            VisiblePanelFalse();
+        }
+
+        private void UpdateRecordsButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new UpdatePurchases());
+            VisiblePanelFalse();
+        }
+
+        private void DeletePurchaseButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new DeletePurchases());
+            VisiblePanelFalse();
+        }
+
+        private void AddSalesButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AddSales());
+            VisiblePanelFalse();
+        }
+
+        private void DisplaySalesButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AllSales());
+            VisiblePanelFalse();
+        }
+
+        private void UpdateSalesButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new UpdateSales());
+            VisiblePanelFalse();
+        }
+
+        private void DeleteSalesButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new DeleteSales());
+            VisiblePanelFalse();
         }
     }
 }

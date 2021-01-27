@@ -45,10 +45,10 @@ namespace Daily_Account
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.PurchasePanel = new System.Windows.Forms.Panel();
-            this.AddPurchaseButton = new Guna.UI2.WinForms.Guna2Button();
-            this.DisplayPurchaseButton = new Guna.UI2.WinForms.Guna2Button();
-            this.UpdateRecordsButton = new Guna.UI2.WinForms.Guna2Button();
             this.DeletePurchaseButton = new Guna.UI2.WinForms.Guna2Button();
+            this.UpdateRecordsButton = new Guna.UI2.WinForms.Guna2Button();
+            this.DisplayPurchaseButton = new Guna.UI2.WinForms.Guna2Button();
+            this.AddPurchaseButton = new Guna.UI2.WinForms.Guna2Button();
             this.SalesPanel = new System.Windows.Forms.Panel();
             this.DeleteSalesButton = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateSalesButton = new Guna.UI2.WinForms.Guna2Button();
@@ -137,6 +137,7 @@ namespace Daily_Account
             this.HomeButton.Size = new System.Drawing.Size(180, 45);
             this.HomeButton.TabIndex = 6;
             this.HomeButton.Text = "Home";
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // LogoutlinkLabel
             // 
@@ -171,6 +172,7 @@ namespace Daily_Account
             this.ReportButton.Size = new System.Drawing.Size(180, 45);
             this.ReportButton.TabIndex = 4;
             this.ReportButton.Text = "Reports";
+            this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
             // 
             // StatisticsButton
             // 
@@ -191,6 +193,7 @@ namespace Daily_Account
             this.StatisticsButton.Size = new System.Drawing.Size(180, 45);
             this.StatisticsButton.TabIndex = 3;
             this.StatisticsButton.Text = "Statistics";
+            this.StatisticsButton.Click += new System.EventHandler(this.StatisticsButton_Click);
             // 
             // StockButton
             // 
@@ -211,6 +214,7 @@ namespace Daily_Account
             this.StockButton.Size = new System.Drawing.Size(180, 45);
             this.StockButton.TabIndex = 2;
             this.StockButton.Text = "Stock";
+            this.StockButton.Click += new System.EventHandler(this.StockButton_Click);
             // 
             // SalesButton
             // 
@@ -282,67 +286,10 @@ namespace Daily_Account
             this.PurchasePanel.Controls.Add(this.UpdateRecordsButton);
             this.PurchasePanel.Controls.Add(this.DisplayPurchaseButton);
             this.PurchasePanel.Controls.Add(this.AddPurchaseButton);
-            this.PurchasePanel.Location = new System.Drawing.Point(259, 189);
+            this.PurchasePanel.Location = new System.Drawing.Point(256, 189);
             this.PurchasePanel.Name = "PurchasePanel";
             this.PurchasePanel.Size = new System.Drawing.Size(200, 198);
             this.PurchasePanel.TabIndex = 6;
-            // 
-            // AddPurchaseButton
-            // 
-            this.AddPurchaseButton.Animated = true;
-            this.AddPurchaseButton.BorderRadius = 5;
-            this.AddPurchaseButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.AddPurchaseButton.CheckedState.FillColor = System.Drawing.Color.White;
-            this.AddPurchaseButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddPurchaseButton.CheckedState.Parent = this.AddPurchaseButton;
-            this.AddPurchaseButton.CustomImages.Parent = this.AddPurchaseButton;
-            this.AddPurchaseButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.AddPurchaseButton.ForeColor = System.Drawing.Color.White;
-            this.AddPurchaseButton.HoverState.Parent = this.AddPurchaseButton;
-            this.AddPurchaseButton.Location = new System.Drawing.Point(3, 3);
-            this.AddPurchaseButton.Name = "AddPurchaseButton";
-            this.AddPurchaseButton.ShadowDecoration.Parent = this.AddPurchaseButton;
-            this.AddPurchaseButton.Size = new System.Drawing.Size(194, 45);
-            this.AddPurchaseButton.TabIndex = 1;
-            this.AddPurchaseButton.Text = "Add Purchase";
-            // 
-            // DisplayPurchaseButton
-            // 
-            this.DisplayPurchaseButton.Animated = true;
-            this.DisplayPurchaseButton.BorderRadius = 5;
-            this.DisplayPurchaseButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.DisplayPurchaseButton.CheckedState.FillColor = System.Drawing.Color.White;
-            this.DisplayPurchaseButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DisplayPurchaseButton.CheckedState.Parent = this.DisplayPurchaseButton;
-            this.DisplayPurchaseButton.CustomImages.Parent = this.DisplayPurchaseButton;
-            this.DisplayPurchaseButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.DisplayPurchaseButton.ForeColor = System.Drawing.Color.White;
-            this.DisplayPurchaseButton.HoverState.Parent = this.DisplayPurchaseButton;
-            this.DisplayPurchaseButton.Location = new System.Drawing.Point(3, 51);
-            this.DisplayPurchaseButton.Name = "DisplayPurchaseButton";
-            this.DisplayPurchaseButton.ShadowDecoration.Parent = this.DisplayPurchaseButton;
-            this.DisplayPurchaseButton.Size = new System.Drawing.Size(194, 45);
-            this.DisplayPurchaseButton.TabIndex = 0;
-            this.DisplayPurchaseButton.Text = "Display All Purchases";
-            // 
-            // UpdateRecordsButton
-            // 
-            this.UpdateRecordsButton.Animated = true;
-            this.UpdateRecordsButton.BorderRadius = 5;
-            this.UpdateRecordsButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.UpdateRecordsButton.CheckedState.FillColor = System.Drawing.Color.White;
-            this.UpdateRecordsButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UpdateRecordsButton.CheckedState.Parent = this.UpdateRecordsButton;
-            this.UpdateRecordsButton.CustomImages.Parent = this.UpdateRecordsButton;
-            this.UpdateRecordsButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.UpdateRecordsButton.ForeColor = System.Drawing.Color.White;
-            this.UpdateRecordsButton.HoverState.Parent = this.UpdateRecordsButton;
-            this.UpdateRecordsButton.Location = new System.Drawing.Point(3, 100);
-            this.UpdateRecordsButton.Name = "UpdateRecordsButton";
-            this.UpdateRecordsButton.ShadowDecoration.Parent = this.UpdateRecordsButton;
-            this.UpdateRecordsButton.Size = new System.Drawing.Size(194, 45);
-            this.UpdateRecordsButton.TabIndex = 0;
-            this.UpdateRecordsButton.Text = "Updated Purchase";
             // 
             // DeletePurchaseButton
             // 
@@ -362,6 +309,67 @@ namespace Daily_Account
             this.DeletePurchaseButton.Size = new System.Drawing.Size(194, 45);
             this.DeletePurchaseButton.TabIndex = 0;
             this.DeletePurchaseButton.Text = "Delete Purchase";
+            this.DeletePurchaseButton.Click += new System.EventHandler(this.DeletePurchaseButton_Click);
+            // 
+            // UpdateRecordsButton
+            // 
+            this.UpdateRecordsButton.Animated = true;
+            this.UpdateRecordsButton.BorderRadius = 5;
+            this.UpdateRecordsButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.UpdateRecordsButton.CheckedState.FillColor = System.Drawing.Color.White;
+            this.UpdateRecordsButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UpdateRecordsButton.CheckedState.Parent = this.UpdateRecordsButton;
+            this.UpdateRecordsButton.CustomImages.Parent = this.UpdateRecordsButton;
+            this.UpdateRecordsButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.UpdateRecordsButton.ForeColor = System.Drawing.Color.White;
+            this.UpdateRecordsButton.HoverState.Parent = this.UpdateRecordsButton;
+            this.UpdateRecordsButton.Location = new System.Drawing.Point(3, 100);
+            this.UpdateRecordsButton.Name = "UpdateRecordsButton";
+            this.UpdateRecordsButton.ShadowDecoration.Parent = this.UpdateRecordsButton;
+            this.UpdateRecordsButton.Size = new System.Drawing.Size(194, 45);
+            this.UpdateRecordsButton.TabIndex = 0;
+            this.UpdateRecordsButton.Text = "Updated Purchase";
+            this.UpdateRecordsButton.Click += new System.EventHandler(this.UpdateRecordsButton_Click);
+            // 
+            // DisplayPurchaseButton
+            // 
+            this.DisplayPurchaseButton.Animated = true;
+            this.DisplayPurchaseButton.BorderRadius = 5;
+            this.DisplayPurchaseButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.DisplayPurchaseButton.CheckedState.FillColor = System.Drawing.Color.White;
+            this.DisplayPurchaseButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.DisplayPurchaseButton.CheckedState.Parent = this.DisplayPurchaseButton;
+            this.DisplayPurchaseButton.CustomImages.Parent = this.DisplayPurchaseButton;
+            this.DisplayPurchaseButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.DisplayPurchaseButton.ForeColor = System.Drawing.Color.White;
+            this.DisplayPurchaseButton.HoverState.Parent = this.DisplayPurchaseButton;
+            this.DisplayPurchaseButton.Location = new System.Drawing.Point(3, 51);
+            this.DisplayPurchaseButton.Name = "DisplayPurchaseButton";
+            this.DisplayPurchaseButton.ShadowDecoration.Parent = this.DisplayPurchaseButton;
+            this.DisplayPurchaseButton.Size = new System.Drawing.Size(194, 45);
+            this.DisplayPurchaseButton.TabIndex = 0;
+            this.DisplayPurchaseButton.Text = "Display All Purchases";
+            this.DisplayPurchaseButton.Click += new System.EventHandler(this.DisplayPurchaseButton_Click);
+            // 
+            // AddPurchaseButton
+            // 
+            this.AddPurchaseButton.Animated = true;
+            this.AddPurchaseButton.BorderRadius = 5;
+            this.AddPurchaseButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.AddPurchaseButton.CheckedState.FillColor = System.Drawing.Color.White;
+            this.AddPurchaseButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AddPurchaseButton.CheckedState.Parent = this.AddPurchaseButton;
+            this.AddPurchaseButton.CustomImages.Parent = this.AddPurchaseButton;
+            this.AddPurchaseButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.AddPurchaseButton.ForeColor = System.Drawing.Color.White;
+            this.AddPurchaseButton.HoverState.Parent = this.AddPurchaseButton;
+            this.AddPurchaseButton.Location = new System.Drawing.Point(3, 3);
+            this.AddPurchaseButton.Name = "AddPurchaseButton";
+            this.AddPurchaseButton.ShadowDecoration.Parent = this.AddPurchaseButton;
+            this.AddPurchaseButton.Size = new System.Drawing.Size(194, 45);
+            this.AddPurchaseButton.TabIndex = 1;
+            this.AddPurchaseButton.Text = "Add Purchase";
+            this.AddPurchaseButton.Click += new System.EventHandler(this.AddPurchaseButton_Click);
             // 
             // SalesPanel
             // 
@@ -393,6 +401,7 @@ namespace Daily_Account
             this.DeleteSalesButton.Size = new System.Drawing.Size(194, 45);
             this.DeleteSalesButton.TabIndex = 0;
             this.DeleteSalesButton.Text = "Delete Sales";
+            this.DeleteSalesButton.Click += new System.EventHandler(this.DeleteSalesButton_Click);
             // 
             // UpdateSalesButton
             // 
@@ -412,6 +421,7 @@ namespace Daily_Account
             this.UpdateSalesButton.Size = new System.Drawing.Size(194, 45);
             this.UpdateSalesButton.TabIndex = 0;
             this.UpdateSalesButton.Text = "Updated Sales";
+            this.UpdateSalesButton.Click += new System.EventHandler(this.UpdateSalesButton_Click);
             // 
             // DisplaySalesButton
             // 
@@ -431,6 +441,7 @@ namespace Daily_Account
             this.DisplaySalesButton.Size = new System.Drawing.Size(194, 45);
             this.DisplaySalesButton.TabIndex = 0;
             this.DisplaySalesButton.Text = "Display All Sales";
+            this.DisplaySalesButton.Click += new System.EventHandler(this.DisplaySalesButton_Click);
             // 
             // AddSalesButton
             // 
@@ -450,6 +461,7 @@ namespace Daily_Account
             this.AddSalesButton.Size = new System.Drawing.Size(194, 45);
             this.AddSalesButton.TabIndex = 1;
             this.AddSalesButton.Text = "Add Sales";
+            this.AddSalesButton.Click += new System.EventHandler(this.AddSalesButton_Click);
             // 
             // DashBoard
             // 

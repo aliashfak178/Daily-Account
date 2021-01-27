@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Daily_Account
 {
-    public partial class PurchaseForm : Form
+    public partial class UpdatePurchases : Form
     {
-        public PurchaseForm()
+        public UpdatePurchases()
         {
             InitializeComponent();
         }

@@ -55,11 +55,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPurchase.Designer.cs">
+      <DependentUpon>AddPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSales.Designer.cs">
+      <DependentUpon>AddSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllPurchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllPurchases.Designer.cs">
+      <DependentUpon>AllPurchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllSales.Designer.cs">
+      <DependentUpon>AllSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePurchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletePurchases.Designer.cs">
+      <DependentUpon>DeletePurchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteSales.Designer.cs">
+      <DependentUpon>DeleteSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -69,14 +111,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PurchaseForm.cs">
+    <Compile Include="UpdatePurchases.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PurchaseForm.Designer.cs">
-      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    <Compile Include="UpdatePurchases.Designer.cs">
+      <DependentUpon>UpdatePurchases.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSales.Designer.cs">
+      <DependentUpon>UpdateSales.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddPurchase.resx">
+      <DependentUpon>AddPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSales.resx">
+      <DependentUpon>AddSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllPurchases.resx">
+      <DependentUpon>AllPurchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllSales.resx">
+      <DependentUpon>AllSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePurchases.resx">
+      <DependentUpon>DeletePurchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteSales.resx">
+      <DependentUpon>DeleteSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -91,8 +160,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="PurchaseForm.resx">
-      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    <EmbeddedResource Include="UpdatePurchases.resx">
+      <DependentUpon>UpdatePurchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSales.resx">
+      <DependentUpon>UpdateSales.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

@@ -1,7 +1,7 @@
 ﻿
 namespace Daily_Account
 {
-    partial class PurchaseForm
+    partial class AddPurchase
     {
         /// <summary>
         /// Required designer variable.
@@ -35,22 +35,23 @@ namespace Daily_Account
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(409, 170);
+            this.label1.Location = new System.Drawing.Point(312, 156);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "PURCHASE fORM";
+            this.label1.Text = "Add Purchase";
             // 
-            // PurchaseForm
+            // AddPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(913, 570);
             this.Controls.Add(this.label1);
-            this.Name = "PurchaseForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "AddPurchase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PurchaseForm";
+            this.Text = "AddPurchase";
             this.ResumeLayout(false);
             this.PerformLayout();
 
