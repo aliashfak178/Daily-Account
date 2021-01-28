@@ -30,15 +30,17 @@ namespace Daily_Account
         private void InitializeComponent()
         {
             this.PurchasePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.SalesPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.TotalPurchaseAmountLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SalesPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.TotalSalesAmountLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.PurchasePanel.SuspendLayout();
             this.SalesPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,6 +62,29 @@ namespace Daily_Account
             this.PurchasePanel.Size = new System.Drawing.Size(338, 187);
             this.PurchasePanel.TabIndex = 0;
             // 
+            // TotalPurchaseAmountLabel
+            // 
+            this.TotalPurchaseAmountLabel.AutoSize = true;
+            this.TotalPurchaseAmountLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TotalPurchaseAmountLabel.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPurchaseAmountLabel.Location = new System.Drawing.Point(87, 76);
+            this.TotalPurchaseAmountLabel.Name = "TotalPurchaseAmountLabel";
+            this.TotalPurchaseAmountLabel.Size = new System.Drawing.Size(40, 45);
+            this.TotalPurchaseAmountLabel.TabIndex = 1;
+            this.TotalPurchaseAmountLabel.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(17, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 76);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "₹";
+            // 
             // SalesPanel
             // 
             this.SalesPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -77,17 +102,16 @@ namespace Daily_Account
             this.SalesPanel.Size = new System.Drawing.Size(338, 187);
             this.SalesPanel.TabIndex = 0;
             // 
-            // label2
+            // TotalSalesAmountLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(17, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 76);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "₹";
+            this.TotalSalesAmountLabel.AutoSize = true;
+            this.TotalSalesAmountLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TotalSalesAmountLabel.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalSalesAmountLabel.Location = new System.Drawing.Point(89, 76);
+            this.TotalSalesAmountLabel.Name = "TotalSalesAmountLabel";
+            this.TotalSalesAmountLabel.Size = new System.Drawing.Size(40, 45);
+            this.TotalSalesAmountLabel.TabIndex = 1;
+            this.TotalSalesAmountLabel.Text = "0";
             // 
             // label3
             // 
@@ -101,45 +125,15 @@ namespace Daily_Account
             this.label3.TabIndex = 0;
             this.label3.Text = "₹";
             // 
-            // TotalPurchaseAmountLabel
-            // 
-            this.TotalPurchaseAmountLabel.AutoSize = true;
-            this.TotalPurchaseAmountLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TotalPurchaseAmountLabel.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPurchaseAmountLabel.Location = new System.Drawing.Point(87, 76);
-            this.TotalPurchaseAmountLabel.Name = "TotalPurchaseAmountLabel";
-            this.TotalPurchaseAmountLabel.Size = new System.Drawing.Size(40, 45);
-            this.TotalPurchaseAmountLabel.TabIndex = 1;
-            this.TotalPurchaseAmountLabel.Text = "0";
-            // 
-            // TotalSalesAmountLabel
-            // 
-            this.TotalSalesAmountLabel.AutoSize = true;
-            this.TotalSalesAmountLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TotalSalesAmountLabel.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSalesAmountLabel.Location = new System.Drawing.Point(89, 76);
-            this.TotalSalesAmountLabel.Name = "TotalSalesAmountLabel";
-            this.TotalSalesAmountLabel.Size = new System.Drawing.Size(40, 45);
-            this.TotalSalesAmountLabel.TabIndex = 1;
-            this.TotalSalesAmountLabel.Text = "0";
-            // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(134, 184);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 42);
             this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(551, 184);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(279, 42);
-            this.panel2.TabIndex = 1;
             // 
             // label1
             // 
@@ -151,6 +145,16 @@ namespace Daily_Account
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Purchase";
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(551, 184);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(279, 42);
+            this.panel2.TabIndex = 1;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -160,6 +164,29 @@ namespace Daily_Account
             this.label4.Size = new System.Drawing.Size(142, 31);
             this.label4.TabIndex = 0;
             this.label4.Text = "Total Sales";
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.rectangleShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(913, 570);
+            this.shapeContainer1.TabIndex = 2;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // rectangleShape1
+            // 
+            this.rectangleShape1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rectangleShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(230)))));
+            this.rectangleShape1.BorderWidth = 3;
+            this.rectangleShape1.CornerRadius = 10;
+            this.rectangleShape1.Location = new System.Drawing.Point(6, 10);
+            this.rectangleShape1.Name = "rectangleShape1";
+            this.rectangleShape1.Size = new System.Drawing.Size(894, 550);
             // 
             // HomePage
             // 
@@ -171,6 +198,7 @@ namespace Daily_Account
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SalesPanel);
             this.Controls.Add(this.PurchasePanel);
+            this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -200,5 +228,7 @@ namespace Daily_Account
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
     }
 }
