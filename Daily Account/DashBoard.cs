@@ -11,7 +11,7 @@ namespace Daily_Account
 {
     public partial class DashBoard : Form
     {
-        String User;
+        public String User;
         public DashBoard(String user)
         {
             InitializeComponent();

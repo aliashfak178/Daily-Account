@@ -54,6 +54,7 @@ namespace Daily_Account
             this.UpdateSalesButton = new Guna.UI2.WinForms.Guna2Button();
             this.DisplaySalesButton = new Guna.UI2.WinForms.Guna2Button();
             this.AddSalesButton = new Guna.UI2.WinForms.Guna2Button();
+            this.SupplierButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.PurchasePanel.SuspendLayout();
             this.SalesPanel.SuspendLayout();
@@ -110,6 +111,7 @@ namespace Daily_Account
             this.panel1.Controls.Add(this.ExitButton);
             this.panel1.Controls.Add(this.ReportButton);
             this.panel1.Controls.Add(this.StatisticsButton);
+            this.panel1.Controls.Add(this.SupplierButton);
             this.panel1.Controls.Add(this.StockButton);
             this.panel1.Controls.Add(this.SalesButton);
             this.panel1.Controls.Add(this.PurchaseButton);
@@ -166,7 +168,7 @@ namespace Daily_Account
             this.ReportButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.ReportButton.ForeColor = System.Drawing.Color.White;
             this.ReportButton.HoverState.Parent = this.ReportButton;
-            this.ReportButton.Location = new System.Drawing.Point(64, 372);
+            this.ReportButton.Location = new System.Drawing.Point(64, 423);
             this.ReportButton.Name = "ReportButton";
             this.ReportButton.ShadowDecoration.Parent = this.ReportButton;
             this.ReportButton.Size = new System.Drawing.Size(180, 45);
@@ -187,7 +189,7 @@ namespace Daily_Account
             this.StatisticsButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.StatisticsButton.ForeColor = System.Drawing.Color.White;
             this.StatisticsButton.HoverState.Parent = this.StatisticsButton;
-            this.StatisticsButton.Location = new System.Drawing.Point(64, 321);
+            this.StatisticsButton.Location = new System.Drawing.Point(64, 372);
             this.StatisticsButton.Name = "StatisticsButton";
             this.StatisticsButton.ShadowDecoration.Parent = this.StatisticsButton;
             this.StatisticsButton.Size = new System.Drawing.Size(180, 45);
@@ -208,7 +210,7 @@ namespace Daily_Account
             this.StockButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.StockButton.ForeColor = System.Drawing.Color.White;
             this.StockButton.HoverState.Parent = this.StockButton;
-            this.StockButton.Location = new System.Drawing.Point(64, 270);
+            this.StockButton.Location = new System.Drawing.Point(64, 265);
             this.StockButton.Name = "StockButton";
             this.StockButton.ShadowDecoration.Parent = this.StockButton;
             this.StockButton.Size = new System.Drawing.Size(180, 45);
@@ -463,6 +465,27 @@ namespace Daily_Account
             this.AddSalesButton.Text = "Add Sales";
             this.AddSalesButton.Click += new System.EventHandler(this.AddSalesButton_Click);
             // 
+            // SupplierButton
+            // 
+            this.SupplierButton.Animated = true;
+            this.SupplierButton.BorderRadius = 10;
+            this.SupplierButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.SupplierButton.CheckedState.FillColor = System.Drawing.Color.White;
+            this.SupplierButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.SupplierButton.CheckedState.Parent = this.SupplierButton;
+            this.SupplierButton.CustomImages.Parent = this.SupplierButton;
+            this.SupplierButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.SupplierButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.SupplierButton.ForeColor = System.Drawing.Color.White;
+            this.SupplierButton.HoverState.Parent = this.SupplierButton;
+            this.SupplierButton.Location = new System.Drawing.Point(64, 319);
+            this.SupplierButton.Name = "SupplierButton";
+            this.SupplierButton.ShadowDecoration.Parent = this.SupplierButton;
+            this.SupplierButton.Size = new System.Drawing.Size(180, 45);
+            this.SupplierButton.TabIndex = 2;
+            this.SupplierButton.Text = "Supplier";
+            this.SupplierButton.Click += new System.EventHandler(this.StockButton_Click);
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,5 +537,6 @@ namespace Daily_Account
         private Guna.UI2.WinForms.Guna2Button UpdateSalesButton;
         private Guna.UI2.WinForms.Guna2Button DisplaySalesButton;
         private Guna.UI2.WinForms.Guna2Button AddSalesButton;
+        private Guna.UI2.WinForms.Guna2Button SupplierButton;
     }
 }
