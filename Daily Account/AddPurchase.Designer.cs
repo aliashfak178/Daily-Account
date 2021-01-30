@@ -38,15 +38,20 @@ namespace Daily_Account
             this.label9 = new System.Windows.Forms.Label();
             this.TotalAmountTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.ShippigChargesTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.DescTextBox = new System.Windows.Forms.RichTextBox();
             this.AddPurchaseButton = new Guna.UI2.WinForms.Guna2Button();
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.GSTNO_TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AddSuplier_CircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Supplier_ComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.BillNo_TextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.QuantityNumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -58,11 +63,8 @@ namespace Daily_Account
             this.label4 = new System.Windows.Forms.Label();
             this.InvoiceTypeComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.AddSuplier_CircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.Supplier_ComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.GSTNO_TextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ItemPriceTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuantityNumericUpDown)).BeginInit();
@@ -193,6 +195,7 @@ namespace Daily_Account
             this.TotalAmountTextBox.Size = new System.Drawing.Size(258, 36);
             this.TotalAmountTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TotalAmountTextBox.TabIndex = 4;
+            this.TotalAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TotalAmountTextBox_KeyPress);
             // 
             // panel1
             // 
@@ -206,15 +209,16 @@ namespace Daily_Account
             this.panel1.Size = new System.Drawing.Size(420, 56);
             this.panel1.TabIndex = 8;
             // 
-            // label10
+            // radioButton2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 26);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Biil To.";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(261, 16);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(118, 28);
+            this.radioButton2.TabIndex = 3;
+            this.radioButton2.Text = "Client A/c";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
@@ -229,16 +233,15 @@ namespace Daily_Account
             this.radioButton1.Text = "Cash A/c";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // label10
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(261, 16);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(118, 28);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.Text = "Client A/c";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 26);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Biil To.";
             // 
             // label12
             // 
@@ -323,7 +326,9 @@ namespace Daily_Account
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel2.Controls.Add(this.ItemPriceTextBox);
             this.panel2.Controls.Add(this.GSTNO_TextBox);
+            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.AddSuplier_CircleButton);
             this.panel2.Controls.Add(this.Supplier_ComboBox);
@@ -343,6 +348,95 @@ namespace Daily_Account
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(494, 487);
             this.panel2.TabIndex = 11;
+            // 
+            // GSTNO_TextBox
+            // 
+            this.GSTNO_TextBox.Animated = true;
+            this.GSTNO_TextBox.AutoRoundedCorners = true;
+            this.GSTNO_TextBox.BorderRadius = 17;
+            this.GSTNO_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GSTNO_TextBox.DefaultText = "";
+            this.GSTNO_TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GSTNO_TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GSTNO_TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GSTNO_TextBox.DisabledState.Parent = this.GSTNO_TextBox;
+            this.GSTNO_TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GSTNO_TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GSTNO_TextBox.FocusedState.Parent = this.GSTNO_TextBox;
+            this.GSTNO_TextBox.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.GSTNO_TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GSTNO_TextBox.HoverState.Parent = this.GSTNO_TextBox;
+            this.GSTNO_TextBox.Location = new System.Drawing.Point(210, 278);
+            this.GSTNO_TextBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.GSTNO_TextBox.Name = "GSTNO_TextBox";
+            this.GSTNO_TextBox.PasswordChar = '\0';
+            this.GSTNO_TextBox.PlaceholderText = "";
+            this.GSTNO_TextBox.ReadOnly = true;
+            this.GSTNO_TextBox.SelectedText = "";
+            this.GSTNO_TextBox.ShadowDecoration.Parent = this.GSTNO_TextBox;
+            this.GSTNO_TextBox.Size = new System.Drawing.Size(258, 36);
+            this.GSTNO_TextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.GSTNO_TextBox.TabIndex = 28;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 288);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 26);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "GST NO.";
+            // 
+            // AddSuplier_CircleButton
+            // 
+            this.AddSuplier_CircleButton.Animated = true;
+            this.AddSuplier_CircleButton.CheckedState.Parent = this.AddSuplier_CircleButton;
+            this.AddSuplier_CircleButton.CustomImages.Parent = this.AddSuplier_CircleButton;
+            this.AddSuplier_CircleButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.AddSuplier_CircleButton.ForeColor = System.Drawing.Color.White;
+            this.AddSuplier_CircleButton.HoverState.Parent = this.AddSuplier_CircleButton;
+            this.AddSuplier_CircleButton.Location = new System.Drawing.Point(428, 134);
+            this.AddSuplier_CircleButton.Name = "AddSuplier_CircleButton";
+            this.AddSuplier_CircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.AddSuplier_CircleButton.ShadowDecoration.Parent = this.AddSuplier_CircleButton;
+            this.AddSuplier_CircleButton.Size = new System.Drawing.Size(62, 48);
+            this.AddSuplier_CircleButton.TabIndex = 26;
+            this.AddSuplier_CircleButton.Text = "+";
+            // 
+            // Supplier_ComboBox
+            // 
+            this.Supplier_ComboBox.Animated = true;
+            this.Supplier_ComboBox.AutoRoundedCorners = true;
+            this.Supplier_ComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.Supplier_ComboBox.BorderRadius = 17;
+            this.Supplier_ComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Supplier_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Supplier_ComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Supplier_ComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Supplier_ComboBox.FocusedState.Parent = this.Supplier_ComboBox;
+            this.Supplier_ComboBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Supplier_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Supplier_ComboBox.HoverState.Parent = this.Supplier_ComboBox;
+            this.Supplier_ComboBox.ItemHeight = 30;
+            this.Supplier_ComboBox.Items.AddRange(new object[] {
+            "test"});
+            this.Supplier_ComboBox.ItemsAppearance.Parent = this.Supplier_ComboBox;
+            this.Supplier_ComboBox.Location = new System.Drawing.Point(164, 146);
+            this.Supplier_ComboBox.Name = "Supplier_ComboBox";
+            this.Supplier_ComboBox.ShadowDecoration.Parent = this.Supplier_ComboBox;
+            this.Supplier_ComboBox.Size = new System.Drawing.Size(258, 36);
+            this.Supplier_ComboBox.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 26);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Supplier:";
             // 
             // BillNo_TextBox
             // 
@@ -399,6 +493,12 @@ namespace Daily_Account
             this.QuantityNumericUpDown.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.QuantityNumericUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.QuantityNumericUpDown.Location = new System.Drawing.Point(164, 434);
+            this.QuantityNumericUpDown.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.QuantityNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.QuantityNumericUpDown.Name = "QuantityNumericUpDown";
             this.QuantityNumericUpDown.ShadowDecoration.Parent = this.QuantityNumericUpDown;
             this.QuantityNumericUpDown.Size = new System.Drawing.Size(275, 36);
@@ -427,7 +527,7 @@ namespace Daily_Account
             this.AddItem_CircleButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.AddItem_CircleButton.ForeColor = System.Drawing.Color.White;
             this.AddItem_CircleButton.HoverState.Parent = this.AddItem_CircleButton;
-            this.AddItem_CircleButton.Location = new System.Drawing.Point(428, 356);
+            this.AddItem_CircleButton.Location = new System.Drawing.Point(428, 377);
             this.AddItem_CircleButton.Name = "AddItem_CircleButton";
             this.AddItem_CircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.AddItem_CircleButton.ShadowDecoration.Parent = this.AddItem_CircleButton;
@@ -439,7 +539,7 @@ namespace Daily_Account
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(41, 378);
+            this.label6.Location = new System.Drawing.Point(36, 389);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 26);
             this.label6.TabIndex = 10;
@@ -460,8 +560,10 @@ namespace Daily_Account
             this.Item_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.Item_ComboBox.HoverState.Parent = this.Item_ComboBox;
             this.Item_ComboBox.ItemHeight = 30;
+            this.Item_ComboBox.Items.AddRange(new object[] {
+            "test"});
             this.Item_ComboBox.ItemsAppearance.Parent = this.Item_ComboBox;
-            this.Item_ComboBox.Location = new System.Drawing.Point(164, 368);
+            this.Item_ComboBox.Location = new System.Drawing.Point(155, 385);
             this.Item_ComboBox.Name = "Item_ComboBox";
             this.Item_ComboBox.ShadowDecoration.Parent = this.Item_ComboBox;
             this.Item_ComboBox.Size = new System.Drawing.Size(258, 36);
@@ -536,92 +638,44 @@ namespace Daily_Account
             this.label2.TabIndex = 14;
             this.label2.Text = "Invoice Type";
             // 
-            // AddSuplier_CircleButton
+            // label14
             // 
-            this.AddSuplier_CircleButton.Animated = true;
-            this.AddSuplier_CircleButton.CheckedState.Parent = this.AddSuplier_CircleButton;
-            this.AddSuplier_CircleButton.CustomImages.Parent = this.AddSuplier_CircleButton;
-            this.AddSuplier_CircleButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.AddSuplier_CircleButton.ForeColor = System.Drawing.Color.White;
-            this.AddSuplier_CircleButton.HoverState.Parent = this.AddSuplier_CircleButton;
-            this.AddSuplier_CircleButton.Location = new System.Drawing.Point(428, 134);
-            this.AddSuplier_CircleButton.Name = "AddSuplier_CircleButton";
-            this.AddSuplier_CircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.AddSuplier_CircleButton.ShadowDecoration.Parent = this.AddSuplier_CircleButton;
-            this.AddSuplier_CircleButton.Size = new System.Drawing.Size(62, 48);
-            this.AddSuplier_CircleButton.TabIndex = 26;
-            this.AddSuplier_CircleButton.Text = "+";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(24, 335);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 26);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Price";
             // 
-            // Supplier_ComboBox
+            // ItemPriceTextBox
             // 
-            this.Supplier_ComboBox.Animated = true;
-            this.Supplier_ComboBox.AutoRoundedCorners = true;
-            this.Supplier_ComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.Supplier_ComboBox.BorderRadius = 17;
-            this.Supplier_ComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Supplier_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Supplier_ComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Supplier_ComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Supplier_ComboBox.FocusedState.Parent = this.Supplier_ComboBox;
-            this.Supplier_ComboBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Supplier_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Supplier_ComboBox.HoverState.Parent = this.Supplier_ComboBox;
-            this.Supplier_ComboBox.ItemHeight = 30;
-            this.Supplier_ComboBox.ItemsAppearance.Parent = this.Supplier_ComboBox;
-            this.Supplier_ComboBox.Location = new System.Drawing.Point(164, 146);
-            this.Supplier_ComboBox.Name = "Supplier_ComboBox";
-            this.Supplier_ComboBox.ShadowDecoration.Parent = this.Supplier_ComboBox;
-            this.Supplier_ComboBox.Size = new System.Drawing.Size(258, 36);
-            this.Supplier_ComboBox.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 26);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Supplier:";
-            // 
-            // GSTNO_TextBox
-            // 
-            this.GSTNO_TextBox.Animated = true;
-            this.GSTNO_TextBox.AutoRoundedCorners = true;
-            this.GSTNO_TextBox.BorderRadius = 17;
-            this.GSTNO_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GSTNO_TextBox.DefaultText = "";
-            this.GSTNO_TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GSTNO_TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GSTNO_TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GSTNO_TextBox.DisabledState.Parent = this.GSTNO_TextBox;
-            this.GSTNO_TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GSTNO_TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GSTNO_TextBox.FocusedState.Parent = this.GSTNO_TextBox;
-            this.GSTNO_TextBox.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.GSTNO_TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GSTNO_TextBox.HoverState.Parent = this.GSTNO_TextBox;
-            this.GSTNO_TextBox.Location = new System.Drawing.Point(210, 278);
-            this.GSTNO_TextBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.GSTNO_TextBox.Name = "GSTNO_TextBox";
-            this.GSTNO_TextBox.PasswordChar = '\0';
-            this.GSTNO_TextBox.PlaceholderText = "";
-            this.GSTNO_TextBox.ReadOnly = true;
-            this.GSTNO_TextBox.SelectedText = "";
-            this.GSTNO_TextBox.ShadowDecoration.Parent = this.GSTNO_TextBox;
-            this.GSTNO_TextBox.Size = new System.Drawing.Size(258, 36);
-            this.GSTNO_TextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.GSTNO_TextBox.TabIndex = 28;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 288);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 26);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "GST NO.";
+            this.ItemPriceTextBox.Animated = true;
+            this.ItemPriceTextBox.AutoRoundedCorners = true;
+            this.ItemPriceTextBox.BorderRadius = 17;
+            this.ItemPriceTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ItemPriceTextBox.DefaultText = "";
+            this.ItemPriceTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ItemPriceTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ItemPriceTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ItemPriceTextBox.DisabledState.Parent = this.ItemPriceTextBox;
+            this.ItemPriceTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ItemPriceTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ItemPriceTextBox.FocusedState.Parent = this.ItemPriceTextBox;
+            this.ItemPriceTextBox.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.ItemPriceTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ItemPriceTextBox.HoverState.Parent = this.ItemPriceTextBox;
+            this.ItemPriceTextBox.Location = new System.Drawing.Point(206, 325);
+            this.ItemPriceTextBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.ItemPriceTextBox.Name = "ItemPriceTextBox";
+            this.ItemPriceTextBox.PasswordChar = '\0';
+            this.ItemPriceTextBox.PlaceholderText = "";
+            this.ItemPriceTextBox.SelectedText = "";
+            this.ItemPriceTextBox.ShadowDecoration.Parent = this.ItemPriceTextBox;
+            this.ItemPriceTextBox.Size = new System.Drawing.Size(258, 36);
+            this.ItemPriceTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.ItemPriceTextBox.TabIndex = 28;
+            this.ItemPriceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemPriceTextBox_KeyPress);
             // 
             // AddPurchase
             // 
@@ -692,5 +746,7 @@ namespace Daily_Account
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox GSTNO_TextBox;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox ItemPriceTextBox;
+        private System.Windows.Forms.Label label14;
     }
 }
