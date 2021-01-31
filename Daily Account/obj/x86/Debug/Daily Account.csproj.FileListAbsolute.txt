@@ -43,3 +43,4 @@ E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AddS
 E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AllSales.resources
 E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.DeleteSales.resources
 E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.UpdateSales.resources
+E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AddPriceForm.resources

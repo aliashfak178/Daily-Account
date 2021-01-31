@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utility;
 
 namespace Daily_Account
 {
@@ -39,6 +41,7 @@ namespace Daily_Account
         {
             if(ValidateForm())
             {
+                
                 MessageBox.Show("Record Added Successfully");
             }
         }
@@ -102,6 +105,46 @@ namespace Daily_Account
             {
                 e.Handled = true;
             }
+        }
+
+        private void AddSuplier_CircleButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddItem_CircleButton_Click(object sender, EventArgs e)
+        {
+            AddPriceForm APF = new AddPriceForm();
+            APF.ShowDialog();
+        }
+
+        private void AddPurchase_Load(object sender, EventArgs e)
+        {
+            LoadAllComboBoxes();
+        }
+
+        private void LoadAllComboBoxes()
+        {
+            Item_ComboBox.DataSource = GetAllItems();
+            Item_ComboBox.DisplayMember = "Item_Name";
+            Item_ComboBox.SelectedIndex = -1;
+        }
+
+        private DataTable GetAllItems()
+        {
+            DataTable Dt_Items = new DataTable();
+            string connString = DBCofiguration.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_GetAllItems", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    Dt_Items.Load(reader);
+                }
+            }
+                return Dt_Items;
         }
     }
 }

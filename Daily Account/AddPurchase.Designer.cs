@@ -47,7 +47,9 @@ namespace Daily_Account
             this.AddPurchaseButton = new Guna.UI2.WinForms.Guna2Button();
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ItemPriceTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.GSTNO_TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.AddSuplier_CircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Supplier_ComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -63,8 +65,6 @@ namespace Daily_Account
             this.label4 = new System.Windows.Forms.Label();
             this.InvoiceTypeComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.ItemPriceTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuantityNumericUpDown)).BeginInit();
@@ -349,6 +349,35 @@ namespace Daily_Account
             this.panel2.Size = new System.Drawing.Size(494, 487);
             this.panel2.TabIndex = 11;
             // 
+            // ItemPriceTextBox
+            // 
+            this.ItemPriceTextBox.Animated = true;
+            this.ItemPriceTextBox.AutoRoundedCorners = true;
+            this.ItemPriceTextBox.BorderRadius = 17;
+            this.ItemPriceTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ItemPriceTextBox.DefaultText = "";
+            this.ItemPriceTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ItemPriceTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ItemPriceTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ItemPriceTextBox.DisabledState.Parent = this.ItemPriceTextBox;
+            this.ItemPriceTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ItemPriceTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ItemPriceTextBox.FocusedState.Parent = this.ItemPriceTextBox;
+            this.ItemPriceTextBox.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.ItemPriceTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ItemPriceTextBox.HoverState.Parent = this.ItemPriceTextBox;
+            this.ItemPriceTextBox.Location = new System.Drawing.Point(206, 325);
+            this.ItemPriceTextBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.ItemPriceTextBox.Name = "ItemPriceTextBox";
+            this.ItemPriceTextBox.PasswordChar = '\0';
+            this.ItemPriceTextBox.PlaceholderText = "";
+            this.ItemPriceTextBox.SelectedText = "";
+            this.ItemPriceTextBox.ShadowDecoration.Parent = this.ItemPriceTextBox;
+            this.ItemPriceTextBox.Size = new System.Drawing.Size(258, 36);
+            this.ItemPriceTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.ItemPriceTextBox.TabIndex = 28;
+            this.ItemPriceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemPriceTextBox_KeyPress);
+            // 
             // GSTNO_TextBox
             // 
             this.GSTNO_TextBox.Animated = true;
@@ -378,6 +407,16 @@ namespace Daily_Account
             this.GSTNO_TextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.GSTNO_TextBox.TabIndex = 28;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(24, 335);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 26);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Price";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -403,6 +442,7 @@ namespace Daily_Account
             this.AddSuplier_CircleButton.Size = new System.Drawing.Size(62, 48);
             this.AddSuplier_CircleButton.TabIndex = 26;
             this.AddSuplier_CircleButton.Text = "+";
+            this.AddSuplier_CircleButton.Click += new System.EventHandler(this.AddSuplier_CircleButton_Click);
             // 
             // Supplier_ComboBox
             // 
@@ -534,6 +574,7 @@ namespace Daily_Account
             this.AddItem_CircleButton.Size = new System.Drawing.Size(62, 48);
             this.AddItem_CircleButton.TabIndex = 21;
             this.AddItem_CircleButton.Text = "+";
+            this.AddItem_CircleButton.Click += new System.EventHandler(this.AddItem_CircleButton_Click);
             // 
             // label6
             // 
@@ -638,45 +679,6 @@ namespace Daily_Account
             this.label2.TabIndex = 14;
             this.label2.Text = "Invoice Type";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(24, 335);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 26);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Price";
-            // 
-            // ItemPriceTextBox
-            // 
-            this.ItemPriceTextBox.Animated = true;
-            this.ItemPriceTextBox.AutoRoundedCorners = true;
-            this.ItemPriceTextBox.BorderRadius = 17;
-            this.ItemPriceTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ItemPriceTextBox.DefaultText = "";
-            this.ItemPriceTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ItemPriceTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ItemPriceTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ItemPriceTextBox.DisabledState.Parent = this.ItemPriceTextBox;
-            this.ItemPriceTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ItemPriceTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ItemPriceTextBox.FocusedState.Parent = this.ItemPriceTextBox;
-            this.ItemPriceTextBox.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.ItemPriceTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ItemPriceTextBox.HoverState.Parent = this.ItemPriceTextBox;
-            this.ItemPriceTextBox.Location = new System.Drawing.Point(206, 325);
-            this.ItemPriceTextBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.ItemPriceTextBox.Name = "ItemPriceTextBox";
-            this.ItemPriceTextBox.PasswordChar = '\0';
-            this.ItemPriceTextBox.PlaceholderText = "";
-            this.ItemPriceTextBox.SelectedText = "";
-            this.ItemPriceTextBox.ShadowDecoration.Parent = this.ItemPriceTextBox;
-            this.ItemPriceTextBox.Size = new System.Drawing.Size(258, 36);
-            this.ItemPriceTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.ItemPriceTextBox.TabIndex = 28;
-            this.ItemPriceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemPriceTextBox_KeyPress);
-            // 
             // AddPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -700,6 +702,7 @@ namespace Daily_Account
             this.Name = "AddPurchase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPurchase";
+            this.Load += new System.EventHandler(this.AddPurchase_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
