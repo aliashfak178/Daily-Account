@@ -65,6 +65,7 @@ namespace Daily_Account
             this.label4 = new System.Windows.Forms.Label();
             this.InvoiceTypeComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.RefreshCircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuantityNumericUpDown)).BeginInit();
@@ -601,8 +602,6 @@ namespace Daily_Account
             this.Item_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.Item_ComboBox.HoverState.Parent = this.Item_ComboBox;
             this.Item_ComboBox.ItemHeight = 30;
-            this.Item_ComboBox.Items.AddRange(new object[] {
-            "test"});
             this.Item_ComboBox.ItemsAppearance.Parent = this.Item_ComboBox;
             this.Item_ComboBox.Location = new System.Drawing.Point(155, 385);
             this.Item_ComboBox.Name = "Item_ComboBox";
@@ -679,12 +678,31 @@ namespace Daily_Account
             this.label2.TabIndex = 14;
             this.label2.Text = "Invoice Type";
             // 
+            // RefreshCircleButton
+            // 
+            this.RefreshCircleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RefreshCircleButton.Animated = true;
+            this.RefreshCircleButton.CheckedState.Parent = this.RefreshCircleButton;
+            this.RefreshCircleButton.CustomImages.Parent = this.RefreshCircleButton;
+            this.RefreshCircleButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.RefreshCircleButton.ForeColor = System.Drawing.Color.White;
+            this.RefreshCircleButton.HoverState.Parent = this.RefreshCircleButton;
+            this.RefreshCircleButton.Location = new System.Drawing.Point(823, 12);
+            this.RefreshCircleButton.Name = "RefreshCircleButton";
+            this.RefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.RefreshCircleButton.ShadowDecoration.Parent = this.RefreshCircleButton;
+            this.RefreshCircleButton.Size = new System.Drawing.Size(62, 48);
+            this.RefreshCircleButton.TabIndex = 26;
+            this.RefreshCircleButton.Text = "↺";
+            this.RefreshCircleButton.Click += new System.EventHandler(this.RefreshCircleButton_Click);
+            // 
             // AddPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(913, 570);
+            this.Controls.Add(this.RefreshCircleButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.AddPurchaseButton);
@@ -751,5 +769,6 @@ namespace Daily_Account
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox ItemPriceTextBox;
         private System.Windows.Forms.Label label14;
+        private Guna.UI2.WinForms.Guna2CircleButton RefreshCircleButton;
     }
 }

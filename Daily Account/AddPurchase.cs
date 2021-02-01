@@ -107,11 +107,6 @@ namespace Daily_Account
             }
         }
 
-        private void AddSuplier_CircleButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddItem_CircleButton_Click(object sender, EventArgs e)
         {
             AddPriceForm APF = new AddPriceForm();
@@ -130,9 +125,10 @@ namespace Daily_Account
             Item_ComboBox.SelectedIndex = -1;
         }
 
+        private DataTable Dt_Items;
         private DataTable GetAllItems()
         {
-            DataTable Dt_Items = new DataTable();
+            Dt_Items = new DataTable();
             string connString = DBCofiguration.ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -145,6 +141,17 @@ namespace Daily_Account
                 }
             }
                 return Dt_Items;
+        }
+
+        private void RefreshCircleButton_Click(object sender, EventArgs e)
+        {
+            LoadAllComboBoxes();
+        }
+
+        private void AddSuplier_CircleButton_Click(object sender, EventArgs e)
+        {
+            ADDSupplierForm ADD = new ADDSupplierForm();
+            ADD.ShowDialog();
         }
     }
 }
