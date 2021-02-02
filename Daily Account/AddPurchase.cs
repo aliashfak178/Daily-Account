@@ -41,9 +41,14 @@ namespace Daily_Account
         {
             if(ValidateForm())
             {
-                
+                InsertPurchases();
                 MessageBox.Show("Record Added Successfully");
             }
+        }
+
+        private void InsertPurchases()
+        {
+            throw new NotImplementedException();
         }
 
         private bool ValidateForm()
@@ -123,12 +128,33 @@ namespace Daily_Account
             Item_ComboBox.DataSource = GetAllItems();
             Item_ComboBox.DisplayMember = "Item_Name";
             Item_ComboBox.SelectedIndex = -1;
+
+            Supplier_ComboBox.DataSource = GetAllSuppierName();
+            Supplier_ComboBox.DisplayMember = "Supplier_Name";
+            Supplier_ComboBox.SelectedIndex = -1;
         }
 
-        private DataTable Dt_Items;
+        private DataTable GetAllSuppierName()
+        {
+            DataTable Dt_Suppliers = new DataTable();
+            string connString = DBCofiguration.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_GetAllSuppliers", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    Dt_Suppliers.Load(reader);
+                }
+            }
+            return Dt_Suppliers;
+        }
+
+
         private DataTable GetAllItems()
         {
-            Dt_Items = new DataTable();
+            DataTable Dt_Items = new DataTable();
             string connString = DBCofiguration.ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
