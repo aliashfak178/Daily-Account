@@ -48,7 +48,64 @@ namespace Daily_Account
 
         private void InsertPurchases()
         {
-            throw new NotImplementedException();
+            string Bill_To;
+            int Item_Percent = GetGSTPercent();
+            int Total_Item_Price = int.Parse(ItemPriceTextBox.Text) + int.Parse(QuantityNumericUpDown.Value.ToString());
+            if (CashRadioButton.Checked ==true)
+            {
+                 Bill_To = "Cash A/C";
+            }
+            else
+            {
+                Bill_To = "Clent A/C";
+            }
+            string connString = DBCofiguration.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd =new SqlCommand("",conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+
+                    cmd.Parameters.AddWithValue("@invoice_Type", InvoiceTypeComboBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_bill_No", BillNo_TextBox.Text);
+                    cmd.Parameters.AddWithValue("@Supplier_Name", Supplier_ComboBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Date", PurchaseDate_DateTimePicker.Value);
+                    cmd.Parameters.AddWithValue("@GSTIN", GSTNO_TextBox.Text);
+                    cmd.Parameters.AddWithValue("@Item_Price", ItemPriceTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Item", Item_ComboBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Quantity", QuantityNumericUpDown.Value);
+                    cmd.Parameters.AddWithValue("@GST_Per", Item_Percent);
+                    cmd.Parameters.AddWithValue("@Shipping_Charges", ShippigChargesTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Total_Amount", TotalAmountTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Bill_To", Bill_To);
+                    cmd.Parameters.AddWithValue("@Purchase_Desc", DescTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Price", Total_Item_Price);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+        }
+
+        private int GetGSTPercent()
+        {
+            if(GSTPer_ComboBox.SelectedIndex == 1)
+            {
+                return 5;
+            }
+            else if(GSTPer_ComboBox.SelectedIndex == 2)
+            {
+                return 18;
+            }
+            else if(GSTPer_ComboBox.SelectedIndex == 3)
+            {
+                return 28;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         private bool ValidateForm()
@@ -178,6 +235,36 @@ namespace Daily_Account
         {
             ADDSupplierForm ADD = new ADDSupplierForm();
             ADD.ShowDialog();
+        }
+
+
+        private void ShippigChargesTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (!char.IsControl(e.KeyChar)) && (!char.IsPunctuation(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TotalAmountTextBox_TextChanged(object sender, EventArgs e)
+        {
+            int GST_Per = GetGSTPercent();
+            int Total_Item_Price = int.Parse(ItemPriceTextBox.Text) + int.Parse(QuantityNumericUpDown.Value.ToString());
+            int OnePer = Total_Item_Price / 100;
+            int GST_Val = OnePer * GST_Per;
+            int Shipping_Charges;
+            if(ShippigChargesTextBox.Text.Trim()==string.Empty)
+            {
+                Shipping_Charges = 0;
+            }
+            else
+            {
+                Shipping_Charges = int.Parse(ShippigChargesTextBox.Text);
+            }
+            if (GSTPer_ComboBox.SelectedIndex != 0)
+            {
+                TotalAmountTextBox.Text = (Shipping_Charges + Total_Item_Price + GST_Val).ToString();
+            }
         }
     }
 }

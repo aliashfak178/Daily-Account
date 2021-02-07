@@ -38,8 +38,8 @@ namespace Daily_Account
             this.label9 = new System.Windows.Forms.Label();
             this.TotalAmountTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.ClientRadioButton = new System.Windows.Forms.RadioButton();
+            this.CashRadioButton = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.ShippigChargesTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -196,43 +196,44 @@ namespace Daily_Account
             this.TotalAmountTextBox.Size = new System.Drawing.Size(258, 36);
             this.TotalAmountTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TotalAmountTextBox.TabIndex = 4;
+            this.TotalAmountTextBox.TextChanged += new System.EventHandler(this.TotalAmountTextBox_TextChanged);
             this.TotalAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TotalAmountTextBox_KeyPress);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.ClientRadioButton);
+            this.panel1.Controls.Add(this.CashRadioButton);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(475, 231);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(420, 56);
             this.panel1.TabIndex = 8;
             // 
-            // radioButton2
+            // ClientRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(261, 16);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(118, 28);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.Text = "Client A/c";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.ClientRadioButton.AutoSize = true;
+            this.ClientRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientRadioButton.Location = new System.Drawing.Point(261, 16);
+            this.ClientRadioButton.Name = "ClientRadioButton";
+            this.ClientRadioButton.Size = new System.Drawing.Size(118, 28);
+            this.ClientRadioButton.TabIndex = 3;
+            this.ClientRadioButton.Text = "Client A/c";
+            this.ClientRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // CashRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(122, 16);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(112, 28);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Cash A/c";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.CashRadioButton.AutoSize = true;
+            this.CashRadioButton.Checked = true;
+            this.CashRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashRadioButton.Location = new System.Drawing.Point(122, 16);
+            this.CashRadioButton.Name = "CashRadioButton";
+            this.CashRadioButton.Size = new System.Drawing.Size(112, 28);
+            this.CashRadioButton.TabIndex = 3;
+            this.CashRadioButton.TabStop = true;
+            this.CashRadioButton.Text = "Cash A/c";
+            this.CashRadioButton.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -283,6 +284,7 @@ namespace Daily_Account
             this.ShippigChargesTextBox.Size = new System.Drawing.Size(225, 36);
             this.ShippigChargesTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.ShippigChargesTextBox.TabIndex = 4;
+            this.ShippigChargesTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShippigChargesTextBox_KeyPress);
             // 
             // DescTextBox
             // 
@@ -742,8 +744,8 @@ namespace Daily_Account
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox TotalAmountTextBox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton ClientRadioButton;
+        private System.Windows.Forms.RadioButton CashRadioButton;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox ShippigChargesTextBox;
