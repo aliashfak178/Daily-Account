@@ -155,6 +155,7 @@ namespace Daily_Account
             this.GSTPer_ComboBox.ShadowDecoration.Parent = this.GSTPer_ComboBox;
             this.GSTPer_ComboBox.Size = new System.Drawing.Size(258, 36);
             this.GSTPer_ComboBox.TabIndex = 3;
+            this.GSTPer_ComboBox.SelectedIndexChanged += new System.EventHandler(this.GSTPer_ComboBox_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -196,7 +197,6 @@ namespace Daily_Account
             this.TotalAmountTextBox.Size = new System.Drawing.Size(258, 36);
             this.TotalAmountTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TotalAmountTextBox.TabIndex = 4;
-            this.TotalAmountTextBox.TextChanged += new System.EventHandler(this.TotalAmountTextBox_TextChanged);
             this.TotalAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TotalAmountTextBox_KeyPress);
             // 
             // panel1
@@ -284,6 +284,7 @@ namespace Daily_Account
             this.ShippigChargesTextBox.Size = new System.Drawing.Size(225, 36);
             this.ShippigChargesTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.ShippigChargesTextBox.TabIndex = 4;
+            this.ShippigChargesTextBox.TextChanged += new System.EventHandler(this.ShippigChargesTextBox_TextChanged);
             this.ShippigChargesTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShippigChargesTextBox_KeyPress);
             // 
             // DescTextBox
@@ -358,7 +359,7 @@ namespace Daily_Account
             this.ItemPriceTextBox.AutoRoundedCorners = true;
             this.ItemPriceTextBox.BorderRadius = 17;
             this.ItemPriceTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ItemPriceTextBox.DefaultText = "";
+            this.ItemPriceTextBox.DefaultText = "0";
             this.ItemPriceTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.ItemPriceTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.ItemPriceTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -375,10 +376,12 @@ namespace Daily_Account
             this.ItemPriceTextBox.PasswordChar = '\0';
             this.ItemPriceTextBox.PlaceholderText = "";
             this.ItemPriceTextBox.SelectedText = "";
+            this.ItemPriceTextBox.SelectionStart = 1;
             this.ItemPriceTextBox.ShadowDecoration.Parent = this.ItemPriceTextBox;
             this.ItemPriceTextBox.Size = new System.Drawing.Size(258, 36);
             this.ItemPriceTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.ItemPriceTextBox.TabIndex = 28;
+            this.ItemPriceTextBox.TextChanged += new System.EventHandler(this.ItemPriceTextBox_TextChanged);
             this.ItemPriceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemPriceTextBox_KeyPress);
             // 
             // GSTNO_TextBox
@@ -551,6 +554,7 @@ namespace Daily_Account
             0,
             0,
             0});
+            this.QuantityNumericUpDown.ValueChanged += new System.EventHandler(this.QuantityNumericUpDown_ValueChanged);
             // 
             // label7
             // 

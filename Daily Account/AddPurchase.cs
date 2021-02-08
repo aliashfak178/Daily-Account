@@ -50,7 +50,7 @@ namespace Daily_Account
         {
             string Bill_To;
             int Item_Percent = GetGSTPercent();
-            int Total_Item_Price = int.Parse(ItemPriceTextBox.Text) + int.Parse(QuantityNumericUpDown.Value.ToString());
+            int Total_Item_Price = int.Parse(ItemPriceTextBox.Text) * int.Parse(QuantityNumericUpDown.Value.ToString());
             if (CashRadioButton.Checked ==true)
             {
                  Bill_To = "Cash A/C";
@@ -62,7 +62,7 @@ namespace Daily_Account
             string connString = DBCofiguration.ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                using (SqlCommand cmd =new SqlCommand("",conn))
+                using (SqlCommand cmd =new SqlCommand("usp_AddPurchase", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     conn.Open();
@@ -179,7 +179,6 @@ namespace Daily_Account
         {
             LoadAllComboBoxes();
         }
-
         private void LoadAllComboBoxes()
         {
             Item_ComboBox.DataSource = GetAllItems();
@@ -246,25 +245,63 @@ namespace Daily_Account
             }
         }
 
-        private void TotalAmountTextBox_TextChanged(object sender, EventArgs e)
+
+        private void ItemPriceTextBox_TextChanged(object sender, EventArgs e)
         {
-            int GST_Per = GetGSTPercent();
-            int Total_Item_Price = int.Parse(ItemPriceTextBox.Text) + int.Parse(QuantityNumericUpDown.Value.ToString());
-            int OnePer = Total_Item_Price / 100;
-            int GST_Val = OnePer * GST_Per;
-            int Shipping_Charges;
+            TotalAmountTextBox.Text = GetTotalAmountValues(0);
+
+        }
+
+        private void QuantityNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            TotalAmountTextBox.Text = GetTotalAmountValues(1);
+        }
+
+        private void GSTPer_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TotalAmountTextBox.Text = GetTotalAmountValues(2);
+        }
+        private void ShippigChargesTextBox_TextChanged(object sender, EventArgs e)
+        {
             if(ShippigChargesTextBox.Text.Trim()==string.Empty)
             {
-                Shipping_Charges = 0;
+                ShippigChargesTextBox.Text = "0";
+            }
+            TotalAmountTextBox.Text = GetTotalAmountValues(3);
+        }
+        private string GetTotalAmountValues(int v)
+        {
+            int temp;
+            if (v==0)
+            {
+                return ItemPriceTextBox.Text;
+            }
+            if(v==1)
+            {
+                temp = int.Parse(ItemPriceTextBox.Text) * int.Parse(QuantityNumericUpDown.Value.ToString());
+                return temp.ToString();
+            }
+            if(v==2)
+            {
+                temp = int.Parse(ItemPriceTextBox.Text) * int.Parse(QuantityNumericUpDown.Value.ToString());
+                int GST_Per = GetGSTPercent();
+                int OnePer = temp / 100;
+                int GST_Val = OnePer * GST_Per;
+                return (temp + GST_Val).ToString();
+            }
+            if(v==3)
+            {
+                temp = int.Parse(ItemPriceTextBox.Text) * int.Parse(QuantityNumericUpDown.Value.ToString());
+                int GST_Per = GetGSTPercent();
+                int OnePer = temp / 100;
+                int GST_Val = OnePer * GST_Per;
+                int Shipping = int.Parse(ShippigChargesTextBox.Text);
+                return (temp + GST_Val + Shipping).ToString();
             }
             else
             {
-                Shipping_Charges = int.Parse(ShippigChargesTextBox.Text);
-            }
-            if (GSTPer_ComboBox.SelectedIndex != 0)
-            {
-                TotalAmountTextBox.Text = (Shipping_Charges + Total_Item_Price + GST_Val).ToString();
-            }
+                return "404";
+            }  
         }
     }
 }

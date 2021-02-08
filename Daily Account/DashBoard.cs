@@ -99,6 +99,7 @@ namespace Daily_Account
         {
             OpenChildForm(new UpdatePurchases());
             VisiblePanelFalse();
+            
         }
 
         private void DeletePurchaseButton_Click(object sender, EventArgs e)
