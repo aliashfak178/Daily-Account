@@ -24,9 +24,10 @@ namespace Daily_Account
             PurchaseDataGridView.DataSource = GetAllPurchase();
         }
 
+        private DataTable DtPurchase;
         private DataTable GetAllPurchase()
         {
-            DataTable DtPurchase = new DataTable();
+            DtPurchase = new DataTable();
             string connString = DBCofiguration.ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -39,6 +40,46 @@ namespace Daily_Account
                 }
             }
             return DtPurchase;
+        }
+
+        private void FilterButton_Click(object sender, EventArgs e)
+        {
+            if((FilterComboBox.SelectedIndex==-1) || ((SearchTextBox.Text.Trim()==string.Empty)))
+            {
+                MessageBox.Show("Please Select Filter Type OR Enter The Text", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataView DtView = DtPurchase.DefaultView;
+                if (FilterComboBox.SelectedIndex == 0)
+                {
+                    DtView.RowFilter = "Bill_No LIKE '%" + SearchTextBox.Text +"%'";
+                }
+                else if (FilterComboBox.SelectedIndex == 1)
+                {
+                    DtView.RowFilter = "Supplier_Name LIKE '%" + SearchTextBox.Text + "%'";
+                }
+                else if (FilterComboBox.SelectedIndex == 2)
+                {
+                    SearchLabel.Text = "Date";
+                }
+            }
+        }
+
+        private void FilterComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (FilterComboBox.SelectedIndex == 0)
+            {
+                SearchLabel.Text = "Bill No.";
+            }
+            else if(FilterComboBox.SelectedIndex == 1)
+            {
+                SearchLabel.Text = "Supplier Name";
+            }
+            else if (FilterComboBox.SelectedIndex == 2)
+            {
+                SearchLabel.Text = "Date";
+            }
         }
     }
 }
