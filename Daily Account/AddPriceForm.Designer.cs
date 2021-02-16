@@ -62,6 +62,7 @@ namespace Daily_Account
             this.ItemNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ItemNameTextBox.HoverState.Parent = this.ItemNameTextBox;
             this.ItemNameTextBox.Location = new System.Drawing.Point(32, 81);
+            this.ItemNameTextBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.ItemNameTextBox.Name = "ItemNameTextBox";
             this.ItemNameTextBox.PasswordChar = '\0';
             this.ItemNameTextBox.PlaceholderText = "";

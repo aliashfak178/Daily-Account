@@ -465,8 +465,6 @@ namespace Daily_Account
             this.Supplier_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.Supplier_ComboBox.HoverState.Parent = this.Supplier_ComboBox;
             this.Supplier_ComboBox.ItemHeight = 30;
-            this.Supplier_ComboBox.Items.AddRange(new object[] {
-            "test"});
             this.Supplier_ComboBox.ItemsAppearance.Parent = this.Supplier_ComboBox;
             this.Supplier_ComboBox.Location = new System.Drawing.Point(164, 146);
             this.Supplier_ComboBox.Name = "Supplier_ComboBox";

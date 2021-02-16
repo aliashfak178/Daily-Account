@@ -61,7 +61,7 @@ namespace Daily_Account
                 }
                 else if (FilterComboBox.SelectedIndex == 2)
                 {
-                    SearchLabel.Text = "Date";
+                    DtView.RowFilter = "Date LIKE '%" + SearchTextBox.Text + "%'";
                 }
             }
         }
