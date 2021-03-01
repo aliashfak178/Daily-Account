@@ -45,3 +45,30 @@ E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Dele
 E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.UpdateSales.resources
 E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AddPriceForm.resources
 E:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.ADDSupplierForm.resources
+D:\Upload File test\Daily-Account\Daily Account\bin\Debug\Daily Account.exe.config
+D:\Upload File test\Daily-Account\Daily Account\bin\Debug\Daily Account.exe
+D:\Upload File test\Daily-Account\Daily Account\bin\Debug\Daily Account.pdb
+D:\Upload File test\Daily-Account\Daily Account\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\Upload File test\Daily-Account\Daily Account\bin\Debug\Utility.dll
+D:\Upload File test\Daily-Account\Daily Account\bin\Debug\Utility.pdb
+D:\Upload File test\Daily-Account\Daily Account\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.csprojAssemblyReference.cache
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AddPriceForm.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AddPurchase.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AddSales.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.ADDSupplierForm.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AllPurchases.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AllSales.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.DashBoard.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.DeletePurchases.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.DeleteSales.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.HomePage.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.LoginForm.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Properties.Resources.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.UpdatePurchases.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.UpdateSales.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.csproj.GenerateResource.cache
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.csproj.CoreCompileInputs.cache
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.csproj.CopyComplete
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.exe
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.pdb

@@ -4,3 +4,9 @@ E:\Upload File test\Daily-Account\Utility\obj\Debug\Utility.csprojAssemblyRefere
 E:\Upload File test\Daily-Account\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
 E:\Upload File test\Daily-Account\Utility\obj\Debug\Utility.dll
 E:\Upload File test\Daily-Account\Utility\obj\Debug\Utility.pdb
+D:\Upload File test\Daily-Account\Utility\bin\Debug\Utility.dll
+D:\Upload File test\Daily-Account\Utility\bin\Debug\Utility.pdb
+D:\Upload File test\Daily-Account\Utility\obj\Debug\Utility.csprojAssemblyReference.cache
+D:\Upload File test\Daily-Account\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+D:\Upload File test\Daily-Account\Utility\obj\Debug\Utility.dll
+D:\Upload File test\Daily-Account\Utility\obj\Debug\Utility.pdb
