@@ -80,6 +80,8 @@ namespace Daily_Account
             {
                 SearchLabel.Text = "Date";
             }
+            PurchaseDataGridView.DataSource = GetAllPurchase();
+            SearchTextBox.Clear();
         }
     }
 }

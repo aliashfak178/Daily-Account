@@ -190,6 +190,7 @@ namespace Daily_Account
             this.PhoneTextBox.Size = new System.Drawing.Size(258, 36);
             this.PhoneTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.PhoneTextBox.TabIndex = 8;
+            this.PhoneTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneTextBox_KeyPress);
             // 
             // label3
             // 
@@ -304,6 +305,7 @@ namespace Daily_Account
             this.PinCodeTextBox.Size = new System.Drawing.Size(258, 36);
             this.PinCodeTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.PinCodeTextBox.TabIndex = 4;
+            this.PinCodeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PinCodeTextBox_KeyPress);
             // 
             // GSTINTextBox
             // 
