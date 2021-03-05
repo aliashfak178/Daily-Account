@@ -204,7 +204,7 @@ namespace Daily_Account
             this.AddPurchaseButton.ShadowDecoration.Parent = this.AddPurchaseButton;
             this.AddPurchaseButton.Size = new System.Drawing.Size(397, 45);
             this.AddPurchaseButton.TabIndex = 56;
-            this.AddPurchaseButton.Text = "Add Purchase";
+            this.AddPurchaseButton.Text = "Update Purchase";
             this.AddPurchaseButton.Click += new System.EventHandler(this.AddPurchaseButton_Click);
             // 
             // ShippigChargesTextBox

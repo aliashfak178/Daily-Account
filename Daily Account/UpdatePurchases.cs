@@ -23,8 +23,38 @@ namespace Daily_Account
         {
             if (ValidateForm())
             {
-                //InsertPurchases();
-                MessageBox.Show("Record Added Successfully");
+                InsertPurchases(BillNoTextBox.Text);
+                MessageBox.Show("Record Updated Successfully");
+            }
+        }
+
+        private void InsertPurchases(string text)
+        {
+            string ConnString = DBCofiguration.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(ConnString))
+            {
+                using (SqlCommand cmd = new SqlCommand("",conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+
+                    cmd.Parameters.AddWithValue("@invoice_Type", InvoiceTypeComboBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_bill_No", BillNo_TextBox.Text);
+                    cmd.Parameters.AddWithValue("@Supplier_Name", Supplier_ComboBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Date", PurchaseDate_DateTimePicker.Value);
+                    cmd.Parameters.AddWithValue("@GSTIN", GSTNO_TextBox.Text);
+                    cmd.Parameters.AddWithValue("@Item_Price", ItemPriceTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Item", Item_ComboBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Quantity", QuantityNumericUpDown.Value);
+                    cmd.Parameters.AddWithValue("@GST_Per", Item_Percent);
+                    cmd.Parameters.AddWithValue("@Shipping_Charges", ShippigChargesTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Total_Amount", TotalAmountTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Bill_To", Bill_To);
+                    cmd.Parameters.AddWithValue("@Purchase_Desc", DescTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Price", Total_Item_Price);
+
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
 
@@ -175,7 +205,7 @@ namespace Daily_Account
             Item_ComboBox.Text = row["Item Name"].ToString();
             ItemPriceTextBox.Text = row["Item Price"].ToString();
             QuantityNumericUpDown.Value = Convert.ToDecimal(row["Quantity"]);
-            TotalAmountTextBox.Text = row["Total Price"].ToString();
+            TotalAmountTextBox.Text = row["Grand total"].ToString();
             GSTPer_ComboBox.Text = row["GST Percent"].ToString() + "%";
             ShippigChargesTextBox.Text = row["Shipping Charges"].ToString();
             DescTextBox.Text = row["Description"].ToString();
