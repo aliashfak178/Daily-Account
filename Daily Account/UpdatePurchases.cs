@@ -23,17 +23,48 @@ namespace Daily_Account
         {
             if (ValidateForm())
             {
+                UpdateCurrentStock(int.Parse(QuantityNumericUpDown.Value.ToString()));
                 InsertPurchases(BillNoTextBox.Text);
                 MessageBox.Show("Record Updated Successfully");
             }
         }
 
-        private void InsertPurchases(string text)
+        private void UpdateCurrentStock(int v)
         {
             string ConnString = DBCofiguration.ConnectionString;
             using (SqlConnection conn = new SqlConnection(ConnString))
             {
-                using (SqlCommand cmd = new SqlCommand("",conn))
+                using (SqlCommand cmd = new SqlCommand("usp_UpdateStock", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+
+                    cmd.Parameters.AddWithValue("@Purchase_bill_No", BillNo_TextBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Item", Item_ComboBox.Text);
+                    cmd.Parameters.AddWithValue("@Purchase_Quantity", v);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void InsertPurchases(string text)
+        {
+            string Bill_To;
+            int Item_Percent = GetGSTPercent();
+            int Total_Item_Price = int.Parse(ItemPriceTextBox.Text) * int.Parse(QuantityNumericUpDown.Value.ToString());
+            if (CashRadioButton.Checked == true)
+            {
+                Bill_To = "Cash A/C";
+            }
+            else
+            {
+                Bill_To = "Clent A/C";
+            }
+            string ConnString = DBCofiguration.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(ConnString))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_UpdatePurchase", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     conn.Open();
