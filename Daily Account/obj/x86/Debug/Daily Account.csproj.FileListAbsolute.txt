@@ -72,3 +72,4 @@ D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.cspr
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.csproj.CopyComplete
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.exe
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.pdb
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.ReceverForm.resources

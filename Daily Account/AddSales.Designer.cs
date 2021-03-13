@@ -35,7 +35,7 @@ namespace Daily_Account
             this.GSTNO_TextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.AddSuplier_CircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.AddRecever_CircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Recever_ComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.BillNo_TextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,7 +50,7 @@ namespace Daily_Account
             this.InvoiceTypeComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.AddPurchaseButton = new Guna.UI2.WinForms.Guna2Button();
+            this.AddSalesButton = new Guna.UI2.WinForms.Guna2Button();
             this.DescTextBox = new System.Windows.Forms.RichTextBox();
             this.ShippigChargesTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -113,6 +113,7 @@ namespace Daily_Account
             this.ItemPriceTextBox.Size = new System.Drawing.Size(258, 36);
             this.ItemPriceTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.ItemPriceTextBox.TabIndex = 28;
+            this.ItemPriceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemPriceTextBox_KeyPress);
             // 
             // panel2
             // 
@@ -121,7 +122,7 @@ namespace Daily_Account
             this.panel2.Controls.Add(this.GSTNO_TextBox);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.AddSuplier_CircleButton);
+            this.panel2.Controls.Add(this.AddRecever_CircleButton);
             this.panel2.Controls.Add(this.Recever_ComboBox);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.BillNo_TextBox);
@@ -189,21 +190,22 @@ namespace Daily_Account
             this.label3.TabIndex = 27;
             this.label3.Text = "GST NO.";
             // 
-            // AddSuplier_CircleButton
+            // AddRecever_CircleButton
             // 
-            this.AddSuplier_CircleButton.Animated = true;
-            this.AddSuplier_CircleButton.CheckedState.Parent = this.AddSuplier_CircleButton;
-            this.AddSuplier_CircleButton.CustomImages.Parent = this.AddSuplier_CircleButton;
-            this.AddSuplier_CircleButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.AddSuplier_CircleButton.ForeColor = System.Drawing.Color.White;
-            this.AddSuplier_CircleButton.HoverState.Parent = this.AddSuplier_CircleButton;
-            this.AddSuplier_CircleButton.Location = new System.Drawing.Point(428, 134);
-            this.AddSuplier_CircleButton.Name = "AddSuplier_CircleButton";
-            this.AddSuplier_CircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.AddSuplier_CircleButton.ShadowDecoration.Parent = this.AddSuplier_CircleButton;
-            this.AddSuplier_CircleButton.Size = new System.Drawing.Size(62, 48);
-            this.AddSuplier_CircleButton.TabIndex = 26;
-            this.AddSuplier_CircleButton.Text = "+";
+            this.AddRecever_CircleButton.Animated = true;
+            this.AddRecever_CircleButton.CheckedState.Parent = this.AddRecever_CircleButton;
+            this.AddRecever_CircleButton.CustomImages.Parent = this.AddRecever_CircleButton;
+            this.AddRecever_CircleButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.AddRecever_CircleButton.ForeColor = System.Drawing.Color.White;
+            this.AddRecever_CircleButton.HoverState.Parent = this.AddRecever_CircleButton;
+            this.AddRecever_CircleButton.Location = new System.Drawing.Point(428, 134);
+            this.AddRecever_CircleButton.Name = "AddRecever_CircleButton";
+            this.AddRecever_CircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.AddRecever_CircleButton.ShadowDecoration.Parent = this.AddRecever_CircleButton;
+            this.AddRecever_CircleButton.Size = new System.Drawing.Size(62, 48);
+            this.AddRecever_CircleButton.TabIndex = 26;
+            this.AddRecever_CircleButton.Text = "+";
+            this.AddRecever_CircleButton.Click += new System.EventHandler(this.AddRecever_CircleButton_Click);
             // 
             // Recever_ComboBox
             // 
@@ -333,6 +335,7 @@ namespace Daily_Account
             this.AddItem_CircleButton.Size = new System.Drawing.Size(62, 48);
             this.AddItem_CircleButton.TabIndex = 21;
             this.AddItem_CircleButton.Text = "+";
+            this.AddItem_CircleButton.Click += new System.EventHandler(this.AddItem_CircleButton_Click);
             // 
             // label6
             // 
@@ -421,6 +424,7 @@ namespace Daily_Account
             this.InvoiceTypeComboBox.ShadowDecoration.Parent = this.InvoiceTypeComboBox;
             this.InvoiceTypeComboBox.Size = new System.Drawing.Size(258, 36);
             this.InvoiceTypeComboBox.TabIndex = 17;
+            this.InvoiceTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.InvoiceTypeComboBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -445,23 +449,24 @@ namespace Daily_Account
             this.label13.TabIndex = 28;
             this.label13.Text = "Total Amount:";
             // 
-            // AddPurchaseButton
+            // AddSalesButton
             // 
-            this.AddPurchaseButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.AddPurchaseButton.Animated = true;
-            this.AddPurchaseButton.AutoRoundedCorners = true;
-            this.AddPurchaseButton.BorderRadius = 21;
-            this.AddPurchaseButton.CheckedState.Parent = this.AddPurchaseButton;
-            this.AddPurchaseButton.CustomImages.Parent = this.AddPurchaseButton;
-            this.AddPurchaseButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.AddPurchaseButton.ForeColor = System.Drawing.Color.White;
-            this.AddPurchaseButton.HoverState.Parent = this.AddPurchaseButton;
-            this.AddPurchaseButton.Location = new System.Drawing.Point(476, 494);
-            this.AddPurchaseButton.Name = "AddPurchaseButton";
-            this.AddPurchaseButton.ShadowDecoration.Parent = this.AddPurchaseButton;
-            this.AddPurchaseButton.Size = new System.Drawing.Size(397, 45);
-            this.AddPurchaseButton.TabIndex = 37;
-            this.AddPurchaseButton.Text = "Add Purchase";
+            this.AddSalesButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.AddSalesButton.Animated = true;
+            this.AddSalesButton.AutoRoundedCorners = true;
+            this.AddSalesButton.BorderRadius = 21;
+            this.AddSalesButton.CheckedState.Parent = this.AddSalesButton;
+            this.AddSalesButton.CustomImages.Parent = this.AddSalesButton;
+            this.AddSalesButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.AddSalesButton.ForeColor = System.Drawing.Color.White;
+            this.AddSalesButton.HoverState.Parent = this.AddSalesButton;
+            this.AddSalesButton.Location = new System.Drawing.Point(476, 494);
+            this.AddSalesButton.Name = "AddSalesButton";
+            this.AddSalesButton.ShadowDecoration.Parent = this.AddSalesButton;
+            this.AddSalesButton.Size = new System.Drawing.Size(397, 45);
+            this.AddSalesButton.TabIndex = 37;
+            this.AddSalesButton.Text = "Add Sales";
+            this.AddSalesButton.Click += new System.EventHandler(this.AddSalesButton_Click);
             // 
             // DescTextBox
             // 
@@ -609,6 +614,7 @@ namespace Daily_Account
             this.TotalAmountTextBox.Size = new System.Drawing.Size(258, 36);
             this.TotalAmountTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TotalAmountTextBox.TabIndex = 34;
+            this.TotalAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TotalAmountTextBox_KeyPress);
             // 
             // GSTPer_ComboBox
             // 
@@ -659,7 +665,7 @@ namespace Daily_Account
             this.Controls.Add(this.RefreshCircleButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.AddPurchaseButton);
+            this.Controls.Add(this.AddSalesButton);
             this.Controls.Add(this.DescTextBox);
             this.Controls.Add(this.ShippigChargesTextBox);
             this.Controls.Add(this.label12);
@@ -673,6 +679,7 @@ namespace Daily_Account
             this.Name = "AddSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddSales";
+            this.Load += new System.EventHandler(this.AddSales_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuantityNumericUpDown)).EndInit();
@@ -691,7 +698,7 @@ namespace Daily_Account
         private Guna.UI2.WinForms.Guna2TextBox GSTNO_TextBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2CircleButton AddSuplier_CircleButton;
+        private Guna.UI2.WinForms.Guna2CircleButton AddRecever_CircleButton;
         private Guna.UI2.WinForms.Guna2ComboBox Recever_ComboBox;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox BillNo_TextBox;
@@ -706,7 +713,7 @@ namespace Daily_Account
         private Guna.UI2.WinForms.Guna2ComboBox InvoiceTypeComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2Button AddPurchaseButton;
+        private Guna.UI2.WinForms.Guna2Button AddSalesButton;
         private System.Windows.Forms.RichTextBox DescTextBox;
         private Guna.UI2.WinForms.Guna2TextBox ShippigChargesTextBox;
         private System.Windows.Forms.Label label12;
