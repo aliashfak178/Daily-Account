@@ -84,6 +84,7 @@ namespace Daily_Account
             this.RefreshCircleButton.Size = new System.Drawing.Size(62, 48);
             this.RefreshCircleButton.TabIndex = 39;
             this.RefreshCircleButton.Text = "↺";
+            this.RefreshCircleButton.Click += new System.EventHandler(this.RefreshCircleButton_Click);
             // 
             // ItemPriceTextBox
             // 
@@ -112,7 +113,8 @@ namespace Daily_Account
             this.ItemPriceTextBox.ShadowDecoration.Parent = this.ItemPriceTextBox;
             this.ItemPriceTextBox.Size = new System.Drawing.Size(258, 36);
             this.ItemPriceTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.ItemPriceTextBox.TabIndex = 28;
+            this.ItemPriceTextBox.TabIndex = 5;
+            this.ItemPriceTextBox.TextChanged += new System.EventHandler(this.ItemPriceTextBox_TextChanged);
             this.ItemPriceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemPriceTextBox_KeyPress);
             // 
             // panel2
@@ -168,7 +170,7 @@ namespace Daily_Account
             this.GSTNO_TextBox.ShadowDecoration.Parent = this.GSTNO_TextBox;
             this.GSTNO_TextBox.Size = new System.Drawing.Size(258, 36);
             this.GSTNO_TextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.GSTNO_TextBox.TabIndex = 28;
+            this.GSTNO_TextBox.TabIndex = 4;
             // 
             // label14
             // 
@@ -227,7 +229,7 @@ namespace Daily_Account
             this.Recever_ComboBox.Name = "Recever_ComboBox";
             this.Recever_ComboBox.ShadowDecoration.Parent = this.Recever_ComboBox;
             this.Recever_ComboBox.Size = new System.Drawing.Size(258, 36);
-            this.Recever_ComboBox.TabIndex = 25;
+            this.Recever_ComboBox.TabIndex = 2;
             // 
             // label5
             // 
@@ -265,7 +267,7 @@ namespace Daily_Account
             this.BillNo_TextBox.ShadowDecoration.Parent = this.BillNo_TextBox;
             this.BillNo_TextBox.Size = new System.Drawing.Size(258, 36);
             this.BillNo_TextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.BillNo_TextBox.TabIndex = 18;
+            this.BillNo_TextBox.TabIndex = 1;
             // 
             // label11
             // 
@@ -303,12 +305,13 @@ namespace Daily_Account
             this.QuantityNumericUpDown.Name = "QuantityNumericUpDown";
             this.QuantityNumericUpDown.ShadowDecoration.Parent = this.QuantityNumericUpDown;
             this.QuantityNumericUpDown.Size = new System.Drawing.Size(275, 36);
-            this.QuantityNumericUpDown.TabIndex = 23;
+            this.QuantityNumericUpDown.TabIndex = 7;
             this.QuantityNumericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.QuantityNumericUpDown.ValueChanged += new System.EventHandler(this.QuantityNumericUpDown_ValueChanged);
             // 
             // label7
             // 
@@ -367,7 +370,7 @@ namespace Daily_Account
             this.Item_ComboBox.Name = "Item_ComboBox";
             this.Item_ComboBox.ShadowDecoration.Parent = this.Item_ComboBox;
             this.Item_ComboBox.Size = new System.Drawing.Size(258, 36);
-            this.Item_ComboBox.TabIndex = 15;
+            this.Item_ComboBox.TabIndex = 6;
             // 
             // SalesDate_DateTimePicker
             // 
@@ -385,7 +388,7 @@ namespace Daily_Account
             this.SalesDate_DateTimePicker.Name = "SalesDate_DateTimePicker";
             this.SalesDate_DateTimePicker.ShadowDecoration.Parent = this.SalesDate_DateTimePicker;
             this.SalesDate_DateTimePicker.Size = new System.Drawing.Size(236, 44);
-            this.SalesDate_DateTimePicker.TabIndex = 20;
+            this.SalesDate_DateTimePicker.TabIndex = 3;
             this.SalesDate_DateTimePicker.Value = new System.DateTime(2021, 1, 29, 9, 54, 35, 148);
             // 
             // label4
@@ -423,7 +426,7 @@ namespace Daily_Account
             this.InvoiceTypeComboBox.Name = "InvoiceTypeComboBox";
             this.InvoiceTypeComboBox.ShadowDecoration.Parent = this.InvoiceTypeComboBox;
             this.InvoiceTypeComboBox.Size = new System.Drawing.Size(258, 36);
-            this.InvoiceTypeComboBox.TabIndex = 17;
+            this.InvoiceTypeComboBox.TabIndex = 0;
             this.InvoiceTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.InvoiceTypeComboBox_SelectedIndexChanged);
             // 
             // label2
@@ -464,7 +467,7 @@ namespace Daily_Account
             this.AddSalesButton.Name = "AddSalesButton";
             this.AddSalesButton.ShadowDecoration.Parent = this.AddSalesButton;
             this.AddSalesButton.Size = new System.Drawing.Size(397, 45);
-            this.AddSalesButton.TabIndex = 37;
+            this.AddSalesButton.TabIndex = 14;
             this.AddSalesButton.Text = "Add Sales";
             this.AddSalesButton.Click += new System.EventHandler(this.AddSalesButton_Click);
             // 
@@ -475,7 +478,7 @@ namespace Daily_Account
             this.DescTextBox.Location = new System.Drawing.Point(466, 369);
             this.DescTextBox.Name = "DescTextBox";
             this.DescTextBox.Size = new System.Drawing.Size(430, 111);
-            this.DescTextBox.TabIndex = 36;
+            this.DescTextBox.TabIndex = 13;
             this.DescTextBox.Text = "";
             // 
             // ShippigChargesTextBox
@@ -505,7 +508,8 @@ namespace Daily_Account
             this.ShippigChargesTextBox.ShadowDecoration.Parent = this.ShippigChargesTextBox;
             this.ShippigChargesTextBox.Size = new System.Drawing.Size(225, 36);
             this.ShippigChargesTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.ShippigChargesTextBox.TabIndex = 33;
+            this.ShippigChargesTextBox.TabIndex = 9;
+            this.ShippigChargesTextBox.TextChanged += new System.EventHandler(this.ShippigChargesTextBox_TextChanged);
             // 
             // label12
             // 
@@ -547,7 +551,7 @@ namespace Daily_Account
             this.CashRadioButton.Location = new System.Drawing.Point(122, 16);
             this.CashRadioButton.Name = "CashRadioButton";
             this.CashRadioButton.Size = new System.Drawing.Size(112, 28);
-            this.CashRadioButton.TabIndex = 3;
+            this.CashRadioButton.TabIndex = 11;
             this.CashRadioButton.TabStop = true;
             this.CashRadioButton.Text = "Cash A/c";
             this.CashRadioButton.UseVisualStyleBackColor = true;
@@ -570,7 +574,7 @@ namespace Daily_Account
             this.ClientRadioButton.Location = new System.Drawing.Point(261, 16);
             this.ClientRadioButton.Name = "ClientRadioButton";
             this.ClientRadioButton.Size = new System.Drawing.Size(118, 28);
-            this.ClientRadioButton.TabIndex = 3;
+            this.ClientRadioButton.TabIndex = 12;
             this.ClientRadioButton.Text = "Client A/c";
             this.ClientRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -613,7 +617,7 @@ namespace Daily_Account
             this.TotalAmountTextBox.ShadowDecoration.Parent = this.TotalAmountTextBox;
             this.TotalAmountTextBox.Size = new System.Drawing.Size(258, 36);
             this.TotalAmountTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.TotalAmountTextBox.TabIndex = 34;
+            this.TotalAmountTextBox.TabIndex = 10;
             this.TotalAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TotalAmountTextBox_KeyPress);
             // 
             // GSTPer_ComboBox
@@ -642,7 +646,8 @@ namespace Daily_Account
             this.GSTPer_ComboBox.Name = "GSTPer_ComboBox";
             this.GSTPer_ComboBox.ShadowDecoration.Parent = this.GSTPer_ComboBox;
             this.GSTPer_ComboBox.Size = new System.Drawing.Size(258, 36);
-            this.GSTPer_ComboBox.TabIndex = 32;
+            this.GSTPer_ComboBox.TabIndex = 8;
+            this.GSTPer_ComboBox.SelectedIndexChanged += new System.EventHandler(this.GSTPer_ComboBox_SelectedIndexChanged);
             // 
             // panel1
             // 

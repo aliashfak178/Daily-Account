@@ -41,8 +41,12 @@ namespace Daily_Account
         {
             if(ValidateForm())
             {
-                InsertPurchases();
-                MessageBox.Show("Record Added Successfully");
+                DialogResult result = MessageBox.Show("Are You Really Want To Add this Record", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    InsertPurchases();
+                    MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -304,6 +308,6 @@ namespace Daily_Account
             }  
         }
 
-        
+
     }
 }
