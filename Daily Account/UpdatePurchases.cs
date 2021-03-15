@@ -25,7 +25,11 @@ namespace Daily_Account
             {
                 UpdateCurrentStock(int.Parse(QuantityNumericUpDown.Value.ToString()));
                 InsertPurchases(BillNoTextBox.Text);
-                MessageBox.Show("Record Updated Successfully");
+                DialogResult result = MessageBox.Show("Are You Really Want to Update This Record", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Record Updated Successfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }   
             }
         }
 
