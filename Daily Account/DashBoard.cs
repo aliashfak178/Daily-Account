@@ -28,6 +28,7 @@ namespace Daily_Account
         {
             PurchasePanel.Visible = false;
             SalesPanel.Visible = false;
+            ReceverAndSupplayerPanel.Visible = false;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -129,6 +130,24 @@ namespace Daily_Account
         private void DeleteSalesButton_Click(object sender, EventArgs e)
         {
             OpenChildForm(new DeleteSales());
+            VisiblePanelFalse();
+        }
+
+        private void SupplierButton_Click(object sender, EventArgs e)
+        {
+            VisiblePanelFalse();
+            ReceverAndSupplayerPanel.Visible = true;
+        }
+
+        private void SupplerButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Suppliers());
+            VisiblePanelFalse();
+        }
+
+        private void ReceverButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Recevers());
             VisiblePanelFalse();
         }
     }

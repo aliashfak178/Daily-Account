@@ -38,6 +38,7 @@ namespace Daily_Account
             this.LogoutlinkLabel = new System.Windows.Forms.LinkLabel();
             this.ReportButton = new Guna.UI2.WinForms.Guna2Button();
             this.StatisticsButton = new Guna.UI2.WinForms.Guna2Button();
+            this.SupplierButton = new Guna.UI2.WinForms.Guna2Button();
             this.StockButton = new Guna.UI2.WinForms.Guna2Button();
             this.SalesButton = new Guna.UI2.WinForms.Guna2Button();
             this.PurchaseButton = new Guna.UI2.WinForms.Guna2Button();
@@ -54,10 +55,13 @@ namespace Daily_Account
             this.UpdateSalesButton = new Guna.UI2.WinForms.Guna2Button();
             this.DisplaySalesButton = new Guna.UI2.WinForms.Guna2Button();
             this.AddSalesButton = new Guna.UI2.WinForms.Guna2Button();
-            this.SupplierButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ReceverAndSupplayerPanel = new System.Windows.Forms.Panel();
+            this.SupplerButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ReceverButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.PurchasePanel.SuspendLayout();
             this.SalesPanel.SuspendLayout();
+            this.ReceverAndSupplayerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ExitButton
@@ -196,6 +200,27 @@ namespace Daily_Account
             this.StatisticsButton.TabIndex = 3;
             this.StatisticsButton.Text = "Statistics";
             this.StatisticsButton.Click += new System.EventHandler(this.StatisticsButton_Click);
+            // 
+            // SupplierButton
+            // 
+            this.SupplierButton.Animated = true;
+            this.SupplierButton.BorderRadius = 10;
+            this.SupplierButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.SupplierButton.CheckedState.FillColor = System.Drawing.Color.White;
+            this.SupplierButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.SupplierButton.CheckedState.Parent = this.SupplierButton;
+            this.SupplierButton.CustomImages.Parent = this.SupplierButton;
+            this.SupplierButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.SupplierButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.SupplierButton.ForeColor = System.Drawing.Color.White;
+            this.SupplierButton.HoverState.Parent = this.SupplierButton;
+            this.SupplierButton.Location = new System.Drawing.Point(3, 319);
+            this.SupplierButton.Name = "SupplierButton";
+            this.SupplierButton.ShadowDecoration.Parent = this.SupplierButton;
+            this.SupplierButton.Size = new System.Drawing.Size(241, 45);
+            this.SupplierButton.TabIndex = 2;
+            this.SupplierButton.Text = "Supplier And Recever";
+            this.SupplierButton.Click += new System.EventHandler(this.SupplierButton_Click);
             // 
             // StockButton
             // 
@@ -465,26 +490,54 @@ namespace Daily_Account
             this.AddSalesButton.Text = "Add Sales";
             this.AddSalesButton.Click += new System.EventHandler(this.AddSalesButton_Click);
             // 
-            // SupplierButton
+            // ReceverAndSupplayerPanel
             // 
-            this.SupplierButton.Animated = true;
-            this.SupplierButton.BorderRadius = 10;
-            this.SupplierButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.SupplierButton.CheckedState.FillColor = System.Drawing.Color.White;
-            this.SupplierButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
-            this.SupplierButton.CheckedState.Parent = this.SupplierButton;
-            this.SupplierButton.CustomImages.Parent = this.SupplierButton;
-            this.SupplierButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
-            this.SupplierButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.SupplierButton.ForeColor = System.Drawing.Color.White;
-            this.SupplierButton.HoverState.Parent = this.SupplierButton;
-            this.SupplierButton.Location = new System.Drawing.Point(64, 319);
-            this.SupplierButton.Name = "SupplierButton";
-            this.SupplierButton.ShadowDecoration.Parent = this.SupplierButton;
-            this.SupplierButton.Size = new System.Drawing.Size(180, 45);
-            this.SupplierButton.TabIndex = 2;
-            this.SupplierButton.Text = "Supplier";
-            this.SupplierButton.Click += new System.EventHandler(this.StockButton_Click);
+            this.ReceverAndSupplayerPanel.Controls.Add(this.ReceverButton);
+            this.ReceverAndSupplayerPanel.Controls.Add(this.SupplerButton);
+            this.ReceverAndSupplayerPanel.Location = new System.Drawing.Point(256, 342);
+            this.ReceverAndSupplayerPanel.Name = "ReceverAndSupplayerPanel";
+            this.ReceverAndSupplayerPanel.Size = new System.Drawing.Size(200, 106);
+            this.ReceverAndSupplayerPanel.TabIndex = 0;
+            // 
+            // SupplerButton
+            // 
+            this.SupplerButton.Animated = true;
+            this.SupplerButton.BorderRadius = 5;
+            this.SupplerButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.SupplerButton.CheckedState.FillColor = System.Drawing.Color.White;
+            this.SupplerButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SupplerButton.CheckedState.Parent = this.SupplerButton;
+            this.SupplerButton.CustomImages.Parent = this.SupplerButton;
+            this.SupplerButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.SupplerButton.ForeColor = System.Drawing.Color.White;
+            this.SupplerButton.HoverState.Parent = this.SupplerButton;
+            this.SupplerButton.Location = new System.Drawing.Point(2, 4);
+            this.SupplerButton.Name = "SupplerButton";
+            this.SupplerButton.ShadowDecoration.Parent = this.SupplerButton;
+            this.SupplerButton.Size = new System.Drawing.Size(197, 45);
+            this.SupplerButton.TabIndex = 2;
+            this.SupplerButton.Text = "Suppliers";
+            this.SupplerButton.Click += new System.EventHandler(this.SupplerButton_Click);
+            // 
+            // ReceverButton
+            // 
+            this.ReceverButton.Animated = true;
+            this.ReceverButton.BorderRadius = 5;
+            this.ReceverButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.ReceverButton.CheckedState.FillColor = System.Drawing.Color.White;
+            this.ReceverButton.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ReceverButton.CheckedState.Parent = this.ReceverButton;
+            this.ReceverButton.CustomImages.Parent = this.ReceverButton;
+            this.ReceverButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.ReceverButton.ForeColor = System.Drawing.Color.White;
+            this.ReceverButton.HoverState.Parent = this.ReceverButton;
+            this.ReceverButton.Location = new System.Drawing.Point(2, 52);
+            this.ReceverButton.Name = "ReceverButton";
+            this.ReceverButton.ShadowDecoration.Parent = this.ReceverButton;
+            this.ReceverButton.Size = new System.Drawing.Size(197, 45);
+            this.ReceverButton.TabIndex = 3;
+            this.ReceverButton.Text = "Recevers";
+            this.ReceverButton.Click += new System.EventHandler(this.ReceverButton_Click);
             // 
             // DashBoard
             // 
@@ -492,6 +545,7 @@ namespace Daily_Account
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.ReceverAndSupplayerPanel);
             this.Controls.Add(this.SalesPanel);
             this.Controls.Add(this.PurchasePanel);
             this.Controls.Add(this.DashBoardPanel);
@@ -507,6 +561,7 @@ namespace Daily_Account
             this.panel1.PerformLayout();
             this.PurchasePanel.ResumeLayout(false);
             this.SalesPanel.ResumeLayout(false);
+            this.ReceverAndSupplayerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -538,5 +593,8 @@ namespace Daily_Account
         private Guna.UI2.WinForms.Guna2Button DisplaySalesButton;
         private Guna.UI2.WinForms.Guna2Button AddSalesButton;
         private Guna.UI2.WinForms.Guna2Button SupplierButton;
+        private System.Windows.Forms.Panel ReceverAndSupplayerPanel;
+        private Guna.UI2.WinForms.Guna2Button ReceverButton;
+        private Guna.UI2.WinForms.Guna2Button SupplerButton;
     }
 }

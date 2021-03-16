@@ -73,3 +73,7 @@ D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.cspr
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.exe
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily Account.pdb
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.ReceverForm.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Recevers.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Suppliers.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.UpdateRecever.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.UpdateSuppiers.resources

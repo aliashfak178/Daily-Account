@@ -129,17 +129,41 @@
     <Compile Include="ReceverForm.Designer.cs">
       <DependentUpon>ReceverForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recevers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recevers.Designer.cs">
+      <DependentUpon>Recevers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatePurchases.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdatePurchases.Designer.cs">
       <DependentUpon>UpdatePurchases.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateRecever.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecever.Designer.cs">
+      <DependentUpon>UpdateRecever.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateSales.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdateSales.Designer.cs">
       <DependentUpon>UpdateSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSuppiers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSuppiers.Designer.cs">
+      <DependentUpon>UpdateSuppiers.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddPriceForm.resx">
       <DependentUpon>AddPriceForm.cs</DependentUpon>
@@ -187,11 +211,23 @@
     <EmbeddedResource Include="ReceverForm.resx">
       <DependentUpon>ReceverForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Recevers.resx">
+      <DependentUpon>Recevers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdatePurchases.resx">
       <DependentUpon>UpdatePurchases.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecever.resx">
+      <DependentUpon>UpdateRecever.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateSales.resx">
       <DependentUpon>UpdateSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSuppiers.resx">
+      <DependentUpon>UpdateSuppiers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
