@@ -12,9 +12,11 @@ namespace Daily_Account
 {
     public partial class UpdateRecever : Form
     {
-        public UpdateRecever()
+        private int ReceverID;
+        public UpdateRecever(int ID)
         {
             InitializeComponent();
+            ReceverID = ID;
         }
     }
 }
