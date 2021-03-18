@@ -187,6 +187,7 @@ namespace Daily_Account
             this.UpdateSuppierButton.Size = new System.Drawing.Size(425, 45);
             this.UpdateSuppierButton.TabIndex = 31;
             this.UpdateSuppierButton.Text = "Update Supplier";
+            this.UpdateSuppierButton.Click += new System.EventHandler(this.UpdateSuppierButton_Click);
             // 
             // AddressRichTextBox
             // 
@@ -194,7 +195,7 @@ namespace Daily_Account
             this.AddressRichTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.AddressRichTextBox.Location = new System.Drawing.Point(468, 230);
             this.AddressRichTextBox.Name = "AddressRichTextBox";
-            this.AddressRichTextBox.Size = new System.Drawing.Size(419, 157);
+            this.AddressRichTextBox.Size = new System.Drawing.Size(419, 168);
             this.AddressRichTextBox.TabIndex = 30;
             this.AddressRichTextBox.Text = "";
             // 
@@ -512,6 +513,7 @@ namespace Daily_Account
             this.DeleteSupplierButton.Size = new System.Drawing.Size(425, 45);
             this.DeleteSupplierButton.TabIndex = 31;
             this.DeleteSupplierButton.Text = "Delete Supplier";
+            this.DeleteSupplierButton.Click += new System.EventHandler(this.DeleteSupplierButton_Click);
             // 
             // UpdateSuppiers
             // 

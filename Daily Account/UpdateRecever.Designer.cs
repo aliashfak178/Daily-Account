@@ -35,7 +35,7 @@ namespace Daily_Account
             this.label9 = new System.Windows.Forms.Label();
             this.BankNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.AddReciverButton = new Guna.UI2.WinForms.Guna2Button();
+            this.UpdateReciverButton = new Guna.UI2.WinForms.Guna2Button();
             this.AddressRichTextBox = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@ namespace Daily_Account
             this.label11 = new System.Windows.Forms.Label();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.DeleteReciverButton = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // AC_NoTextBox
@@ -170,22 +171,22 @@ namespace Daily_Account
             this.label6.TabIndex = 58;
             this.label6.Text = "Bank Name:-";
             // 
-            // AddReciverButton
+            // UpdateReciverButton
             // 
-            this.AddReciverButton.Animated = true;
-            this.AddReciverButton.AutoRoundedCorners = true;
-            this.AddReciverButton.BorderRadius = 21;
-            this.AddReciverButton.CheckedState.Parent = this.AddReciverButton;
-            this.AddReciverButton.CustomImages.Parent = this.AddReciverButton;
-            this.AddReciverButton.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.AddReciverButton.ForeColor = System.Drawing.Color.White;
-            this.AddReciverButton.HoverState.Parent = this.AddReciverButton;
-            this.AddReciverButton.Location = new System.Drawing.Point(462, 462);
-            this.AddReciverButton.Name = "AddReciverButton";
-            this.AddReciverButton.ShadowDecoration.Parent = this.AddReciverButton;
-            this.AddReciverButton.Size = new System.Drawing.Size(425, 45);
-            this.AddReciverButton.TabIndex = 54;
-            this.AddReciverButton.Text = "Add Reciver";
+            this.UpdateReciverButton.Animated = true;
+            this.UpdateReciverButton.AutoRoundedCorners = true;
+            this.UpdateReciverButton.BorderRadius = 21;
+            this.UpdateReciverButton.CheckedState.Parent = this.UpdateReciverButton;
+            this.UpdateReciverButton.CustomImages.Parent = this.UpdateReciverButton;
+            this.UpdateReciverButton.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.UpdateReciverButton.ForeColor = System.Drawing.Color.White;
+            this.UpdateReciverButton.HoverState.Parent = this.UpdateReciverButton;
+            this.UpdateReciverButton.Location = new System.Drawing.Point(462, 472);
+            this.UpdateReciverButton.Name = "UpdateReciverButton";
+            this.UpdateReciverButton.ShadowDecoration.Parent = this.UpdateReciverButton;
+            this.UpdateReciverButton.Size = new System.Drawing.Size(425, 45);
+            this.UpdateReciverButton.TabIndex = 54;
+            this.UpdateReciverButton.Text = "Update Reciver";
             // 
             // AddressRichTextBox
             // 
@@ -193,7 +194,7 @@ namespace Daily_Account
             this.AddressRichTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.AddressRichTextBox.Location = new System.Drawing.Point(468, 230);
             this.AddressRichTextBox.Name = "AddressRichTextBox";
-            this.AddressRichTextBox.Size = new System.Drawing.Size(419, 210);
+            this.AddressRichTextBox.Size = new System.Drawing.Size(419, 173);
             this.AddressRichTextBox.TabIndex = 53;
             this.AddressRichTextBox.Text = "";
             // 
@@ -494,19 +495,38 @@ namespace Daily_Account
             this.shapeContainer1.TabIndex = 66;
             this.shapeContainer1.TabStop = false;
             // 
+            // DeleteReciverButton
+            // 
+            this.DeleteReciverButton.Animated = true;
+            this.DeleteReciverButton.AutoRoundedCorners = true;
+            this.DeleteReciverButton.BorderRadius = 21;
+            this.DeleteReciverButton.CheckedState.Parent = this.DeleteReciverButton;
+            this.DeleteReciverButton.CustomImages.Parent = this.DeleteReciverButton;
+            this.DeleteReciverButton.FillColor = System.Drawing.Color.Red;
+            this.DeleteReciverButton.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.DeleteReciverButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteReciverButton.HoverState.Parent = this.DeleteReciverButton;
+            this.DeleteReciverButton.Location = new System.Drawing.Point(460, 421);
+            this.DeleteReciverButton.Name = "DeleteReciverButton";
+            this.DeleteReciverButton.ShadowDecoration.Parent = this.DeleteReciverButton;
+            this.DeleteReciverButton.Size = new System.Drawing.Size(425, 45);
+            this.DeleteReciverButton.TabIndex = 67;
+            this.DeleteReciverButton.Text = "Delete Reciver";
+            // 
             // UpdateRecever
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(897, 531);
+            this.Controls.Add(this.DeleteReciverButton);
             this.Controls.Add(this.AC_NoTextBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.IFSCCodeTextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.BankNameTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.AddReciverButton);
+            this.Controls.Add(this.UpdateReciverButton);
             this.Controls.Add(this.AddressRichTextBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -529,6 +549,7 @@ namespace Daily_Account
             this.Name = "UpdateRecever";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateRecever";
+            this.Load += new System.EventHandler(this.UpdateRecever_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,7 +563,7 @@ namespace Daily_Account
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox BankNameTextBox;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Button AddReciverButton;
+        private Guna.UI2.WinForms.Guna2Button UpdateReciverButton;
         private System.Windows.Forms.RichTextBox AddressRichTextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -561,5 +582,6 @@ namespace Daily_Account
         private System.Windows.Forms.Label label11;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Guna.UI2.WinForms.Guna2Button DeleteReciverButton;
     }
 }

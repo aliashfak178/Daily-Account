@@ -54,5 +54,11 @@ namespace Daily_Account
             UpdateRecever UR=new UpdateRecever(ID);
             UR.ShowDialog();
         }
+
+        private void FilterButton_Click(object sender, EventArgs e)
+        {
+            DataView DtView = DtRecever.DefaultView;
+            DtView.RowFilter = "Supplier_Name LIKE '%" + SearchTextBox.Text + "%'";
+        }
     }
 }

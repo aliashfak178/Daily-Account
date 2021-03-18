@@ -90,6 +90,7 @@ namespace Daily_Account
             this.FilterButton.Size = new System.Drawing.Size(194, 45);
             this.FilterButton.TabIndex = 10;
             this.FilterButton.Text = "Filter";
+            this.FilterButton.Click += new System.EventHandler(this.FilterButton_Click);
             // 
             // ReceverDataGridView
             // 
