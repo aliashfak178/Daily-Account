@@ -71,6 +71,7 @@ namespace Daily_Account
 
         private void StockButton_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new AllStocks());
             VisiblePanelFalse();
         }
 

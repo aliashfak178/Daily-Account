@@ -41,6 +41,8 @@ namespace Daily_Account
             this.label4 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.label5 = new System.Windows.Forms.Label();
+            this.FilterByYearComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.PurchasePanel.SuspendLayout();
             this.SalesPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -188,12 +190,48 @@ namespace Daily_Account
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(894, 550);
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(128, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(279, 31);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Filter Amount By Year";
+            // 
+            // FilterByYearComboBox
+            // 
+            this.FilterByYearComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FilterByYearComboBox.Animated = true;
+            this.FilterByYearComboBox.AutoRoundedCorners = true;
+            this.FilterByYearComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.FilterByYearComboBox.BorderRadius = 17;
+            this.FilterByYearComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.FilterByYearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FilterByYearComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FilterByYearComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FilterByYearComboBox.FocusedState.Parent = this.FilterByYearComboBox;
+            this.FilterByYearComboBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.FilterByYearComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.FilterByYearComboBox.HoverState.Parent = this.FilterByYearComboBox;
+            this.FilterByYearComboBox.ItemHeight = 30;
+            this.FilterByYearComboBox.ItemsAppearance.Parent = this.FilterByYearComboBox;
+            this.FilterByYearComboBox.Location = new System.Drawing.Point(458, 51);
+            this.FilterByYearComboBox.Name = "FilterByYearComboBox";
+            this.FilterByYearComboBox.ShadowDecoration.Parent = this.FilterByYearComboBox;
+            this.FilterByYearComboBox.Size = new System.Drawing.Size(276, 36);
+            this.FilterByYearComboBox.TabIndex = 5;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(913, 570);
+            this.Controls.Add(this.FilterByYearComboBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SalesPanel);
@@ -213,6 +251,7 @@ namespace Daily_Account
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -230,5 +269,7 @@ namespace Daily_Account
         private System.Windows.Forms.Label label4;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2ComboBox FilterByYearComboBox;
     }
 }

@@ -62,5 +62,91 @@ namespace Daily_Account
             }
             return Dt_Suppliers;
         }
+
+        private void UpdateReciverButton_Click(object sender, EventArgs e)
+        {
+            if(IsValidated())
+            {
+                DialogResult result = MessageBox.Show("Are You Really Want To Update This Record","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                {
+                    UpdateRecevers(ReceverID);
+                    MessageBox.Show("Record Updated Successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void UpdateRecevers(int receverID)
+        {
+            string connString = DBCofiguration.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_UpdatedRecever", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+
+                    cmd.Parameters.AddWithValue("@ReceverID", receverID);
+                    cmd.Parameters.AddWithValue("@ReceverName", ReceverName_TextBox.Text);
+                    cmd.Parameters.AddWithValue("@Email", EmailTextBox.Text);
+                    cmd.Parameters.AddWithValue("@State", StateTextBox.Text);
+                    cmd.Parameters.AddWithValue("@City", CityTextBox.Text);
+                    cmd.Parameters.AddWithValue("@PinCode", PinCodeTextBox.Text);
+                    cmd.Parameters.AddWithValue("@BankName", BankNameTextBox.Text);
+                    cmd.Parameters.AddWithValue("@IFSCCode", IFSCCodeTextBox.Text);
+                    cmd.Parameters.AddWithValue("@AccountNo", AC_NoTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Phone", PhoneTextBox.Text);
+                    cmd.Parameters.AddWithValue("@GSTIN", GSTINTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Address", AddressRichTextBox.Text);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private bool IsValidated()
+        {
+            if (ReceverName_TextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Enter Supplier Name First", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (StateTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Enter State First", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (CityTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Enter City First", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        private void DeleteReciverButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are You Really Want To Update This Record", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                DeleteThisRecord(ReceverID);
+                MessageBox.Show("Record Deleted Successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void DeleteThisRecord(int receverID)
+        {
+            string connString = DBCofiguration.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_DeleteRecever", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+
+                    cmd.Parameters.AddWithValue("@ReceverID", receverID);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

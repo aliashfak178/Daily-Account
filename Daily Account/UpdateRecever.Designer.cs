@@ -187,6 +187,7 @@ namespace Daily_Account
             this.UpdateReciverButton.Size = new System.Drawing.Size(425, 45);
             this.UpdateReciverButton.TabIndex = 54;
             this.UpdateReciverButton.Text = "Update Reciver";
+            this.UpdateReciverButton.Click += new System.EventHandler(this.UpdateReciverButton_Click);
             // 
             // AddressRichTextBox
             // 
@@ -512,6 +513,7 @@ namespace Daily_Account
             this.DeleteReciverButton.Size = new System.Drawing.Size(425, 45);
             this.DeleteReciverButton.TabIndex = 67;
             this.DeleteReciverButton.Text = "Delete Reciver";
+            this.DeleteReciverButton.Click += new System.EventHandler(this.DeleteReciverButton_Click);
             // 
             // UpdateRecever
             // 

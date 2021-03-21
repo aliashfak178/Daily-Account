@@ -91,6 +91,12 @@
     <Compile Include="AllSales.Designer.cs">
       <DependentUpon>AllSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllStocks.Designer.cs">
+      <DependentUpon>AllStocks.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     <Compile Include="Suppliers.Designer.cs">
       <DependentUpon>Suppliers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Stock.Designer.cs">
+      <DependentUpon>Update Stock.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatePurchases.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,9 @@
     <EmbeddedResource Include="AllSales.resx">
       <DependentUpon>AllSales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllStocks.resx">
+      <DependentUpon>AllStocks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Suppliers.resx">
       <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Stock.resx">
+      <DependentUpon>Update Stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePurchases.resx">
       <DependentUpon>UpdatePurchases.cs</DependentUpon>

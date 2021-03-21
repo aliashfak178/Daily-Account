@@ -77,3 +77,5 @@ D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Rece
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Suppliers.resources
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.UpdateRecever.resources
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.UpdateSuppiers.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AllStocks.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Update_Stock.resources
