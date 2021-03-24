@@ -28,9 +28,9 @@ namespace Daily_Account
 
         private void LoadComboBox()
         {
-            FilterByYearComboBox.DataSource = GetAllYear();
-            FilterByYearComboBox.DisplayMember = "Years";
-            FilterByYearComboBox.SelectedIndex = -1;
+            FilterComboBox.DataSource = GetAllYear();
+            FilterComboBox.DisplayMember = "Years";
+            FilterComboBox.SelectedIndex = -1;
         }
 
         private void LoadPurchaseSalesAmount()
@@ -79,9 +79,27 @@ namespace Daily_Account
             return Dt_Records;
         }
 
-        private void FilterByYearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+       
+        
+        private DataTable GetPurchaseSales()
         {
-            GetPurchaseSaleByYear();
+            
+            DataTable Dt_Records = new DataTable();
+            string connString = DBCofiguration.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_GetAmountByYear", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@Year", FilterComboBox.Text);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    Dt_Records.Load(reader);
+                }
+            }
+
+            return Dt_Records;
         }
 
         private void GetPurchaseSaleByYear()
@@ -92,26 +110,23 @@ namespace Daily_Account
             TotalPurchaseAmountLabel.Text = row["Purchase"].ToString();
             TotalSalesAmountLabel.Text = row["Sales"].ToString();
         }
-        
-        private DataTable GetPurchaseSales()
+
+        private void FilterButton_Click(object sender, EventArgs e)
         {
-            int year = int.Parse(FilterByYearComboBox.Text);
-            DataTable Dt_Records = new DataTable();
-            string connString = DBCofiguration.ConnectionString;
-            using (SqlConnection conn = new SqlConnection(connString))
+            if(isValidate())
             {
-                using (SqlCommand cmd = new SqlCommand("usp_GetAmountByYear", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    conn.Open();
-                    cmd.Parameters.AddWithValue("@Year", year);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    Dt_Records.Load(reader);
-                }
+                GetPurchaseSaleByYear();
             }
+        }
 
-            return Dt_Records;
+        private bool isValidate()
+        {
+            if(FilterComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please Select Year Before Filtering", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -77,6 +77,7 @@ namespace Daily_Account
 
         private void StatisticsButton_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new StatisticsForm());
             VisiblePanelFalse();
         }
 
