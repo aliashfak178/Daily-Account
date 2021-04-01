@@ -80,3 +80,4 @@ D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Upda
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.AllStocks.resources
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.Update_Stock.resources
 D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.StatisticsForm.resources
+D:\Upload File test\Daily-Account\Daily Account\obj\x86\Debug\Daily_Account.ReportForm.resources

@@ -29,18 +29,18 @@ namespace Daily_Account
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label5 = new System.Windows.Forms.Label();
             this.FilterByYearComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.FilterButton = new Guna.UI2.WinForms.Guna2Button();
@@ -59,7 +59,7 @@ namespace Daily_Account
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-6, 31);
+            this.label5.Location = new System.Drawing.Point(-14, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(256, 31);
             this.label5.TabIndex = 5;
@@ -82,7 +82,7 @@ namespace Daily_Account
             this.FilterByYearComboBox.HoverState.Parent = this.FilterByYearComboBox;
             this.FilterByYearComboBox.ItemHeight = 30;
             this.FilterByYearComboBox.ItemsAppearance.Parent = this.FilterByYearComboBox;
-            this.FilterByYearComboBox.Location = new System.Drawing.Point(287, 31);
+            this.FilterByYearComboBox.Location = new System.Drawing.Point(279, 31);
             this.FilterByYearComboBox.Name = "FilterByYearComboBox";
             this.FilterByYearComboBox.ShadowDecoration.Parent = this.FilterByYearComboBox;
             this.FilterByYearComboBox.Size = new System.Drawing.Size(276, 36);
@@ -100,7 +100,7 @@ namespace Daily_Account
             this.FilterButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.FilterButton.ForeColor = System.Drawing.Color.White;
             this.FilterButton.HoverState.Parent = this.FilterButton;
-            this.FilterButton.Location = new System.Drawing.Point(599, 22);
+            this.FilterButton.Location = new System.Drawing.Point(591, 22);
             this.FilterButton.Name = "FilterButton";
             this.FilterButton.ShadowDecoration.Parent = this.FilterButton;
             this.FilterButton.Size = new System.Drawing.Size(247, 45);
@@ -117,35 +117,35 @@ namespace Daily_Account
             this.panel1.Controls.Add(this.PurchaseChart);
             this.panel1.Location = new System.Drawing.Point(17, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(833, 988);
+            this.panel1.Size = new System.Drawing.Size(816, 988);
             this.panel1.TabIndex = 16;
             // 
             // PurchaseSalesPiChart
             // 
-            chartArea4.Area3DStyle.Enable3D = true;
-            chartArea4.Name = "ChartArea1";
-            this.PurchaseSalesPiChart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.PurchaseSalesPiChart.Legends.Add(legend4);
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.Name = "ChartArea1";
+            this.PurchaseSalesPiChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.PurchaseSalesPiChart.Legends.Add(legend1);
             this.PurchaseSalesPiChart.Location = new System.Drawing.Point(15, 660);
             this.PurchaseSalesPiChart.Name = "PurchaseSalesPiChart";
             this.PurchaseSalesPiChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            series4.IsValueShownAsLabel = true;
-            series4.LabelFormat = "#.## %";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.PurchaseSalesPiChart.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            series1.IsValueShownAsLabel = true;
+            series1.LabelFormat = "#.## %";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.PurchaseSalesPiChart.Series.Add(series1);
             this.PurchaseSalesPiChart.Size = new System.Drawing.Size(813, 300);
             this.PurchaseSalesPiChart.TabIndex = 1;
             this.PurchaseSalesPiChart.Text = "chart1";
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            title4.ForeColor = System.Drawing.Color.DarkTurquoise;
-            title4.Name = "Title1";
-            title4.Text = "Purchase And Sales";
-            this.PurchaseSalesPiChart.Titles.Add(title4);
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            title1.ForeColor = System.Drawing.Color.DarkTurquoise;
+            title1.Name = "Title1";
+            title1.Text = "Purchase And Sales";
+            this.PurchaseSalesPiChart.Titles.Add(title1);
             // 
             // SalesChart
             // 
@@ -154,28 +154,28 @@ namespace Daily_Account
             this.SalesChart.BorderlineColor = System.Drawing.Color.Black;
             this.SalesChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.SalesChart.BorderlineWidth = 3;
-            chartArea5.Name = "ChartArea1";
-            this.SalesChart.ChartAreas.Add(chartArea5);
-            legend5.Enabled = false;
-            legend5.Name = "Legend1";
-            this.SalesChart.Legends.Add(legend5);
+            chartArea2.Name = "ChartArea1";
+            this.SalesChart.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.SalesChart.Legends.Add(legend2);
             this.SalesChart.Location = new System.Drawing.Point(15, 333);
             this.SalesChart.Name = "SalesChart";
             this.SalesChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series5.IsValueShownAsLabel = true;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.SalesChart.Series.Add(series5);
-            this.SalesChart.Size = new System.Drawing.Size(793, 289);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.SalesChart.Series.Add(series2);
+            this.SalesChart.Size = new System.Drawing.Size(776, 289);
             this.SalesChart.TabIndex = 0;
             this.SalesChart.Text = "chart1";
-            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            title5.ForeColor = System.Drawing.Color.BlueViolet;
-            title5.Name = "Title1";
-            title5.Text = "Total Sales";
-            this.SalesChart.Titles.Add(title5);
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            title2.ForeColor = System.Drawing.Color.BlueViolet;
+            title2.Name = "Title1";
+            title2.Text = "Total Sales";
+            this.SalesChart.Titles.Add(title2);
             // 
             // PurchaseChart
             // 
@@ -184,28 +184,28 @@ namespace Daily_Account
             this.PurchaseChart.BorderlineColor = System.Drawing.Color.Black;
             this.PurchaseChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.PurchaseChart.BorderlineWidth = 3;
-            chartArea6.Name = "ChartArea1";
-            this.PurchaseChart.ChartAreas.Add(chartArea6);
-            legend6.Enabled = false;
-            legend6.Name = "Legend1";
-            this.PurchaseChart.Legends.Add(legend6);
+            chartArea3.Name = "ChartArea1";
+            this.PurchaseChart.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
+            legend3.Name = "Legend1";
+            this.PurchaseChart.Legends.Add(legend3);
             this.PurchaseChart.Location = new System.Drawing.Point(15, 19);
             this.PurchaseChart.Name = "PurchaseChart";
             this.PurchaseChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series6.IsValueShownAsLabel = true;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.PurchaseChart.Series.Add(series6);
-            this.PurchaseChart.Size = new System.Drawing.Size(796, 289);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series3.IsValueShownAsLabel = true;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.PurchaseChart.Series.Add(series3);
+            this.PurchaseChart.Size = new System.Drawing.Size(779, 289);
             this.PurchaseChart.TabIndex = 0;
             this.PurchaseChart.Text = "chart1";
-            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            title6.ForeColor = System.Drawing.Color.BlueViolet;
-            title6.Name = "Title1";
-            title6.Text = "Total Purchase";
-            this.PurchaseChart.Titles.Add(title6);
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            title3.ForeColor = System.Drawing.Color.BlueViolet;
+            title3.Name = "Title1";
+            title3.Text = "Total Purchase";
+            this.PurchaseChart.Titles.Add(title3);
             // 
             // StatisticsForm
             // 
